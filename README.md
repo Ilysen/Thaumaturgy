@@ -19,11 +19,8 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Jun. 29, 2018
 
-#### 1.0.2
-* Finished GitHub migration and integration.
-
 #### 1.0.1
-* Added mod browser icon.
+* Added mod browser icon and changed changelog entry in the description.
 
 #### 1.0.0
 
