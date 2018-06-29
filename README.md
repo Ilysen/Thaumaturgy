@@ -17,6 +17,7 @@ You are free to decompile, modify etc. this mod under the MIT License.
 
 # Changelog
 
-## Jun. 29, 2018 - 1.0.0
+### Jun. 29, 2018 - 1.0.0
 
 * Initial release and publication to GitHub.
+* Licensed under MIT.

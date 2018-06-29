@@ -4,9 +4,9 @@ The Thaumaturge will move in after defeating the Eye of Cthulhu. They are also e
 
 Examples of recipes added by Thaumaturgy use include transmuting 25 crimstone into 25 ebonstone with an auric shard, creating a cloud in a bottle with 1 bottle, 20 clouds, and 3 auric shards, or replicating a piece of wood into 75 wood with an auric shard. All recipes are made at a Thaumatrestle, and most require a specialized focus nearby, which you can also purchase from the Thaumaturge.
 
-Feel free to decompile this mod to view its code and assets for reference.
-
 A mod like Recipe Browser is highly recommended!
+
+Feel free to decompile this mod to view its code and assets for reference. This mod is licensed under the MIT License; for the source code and more details, head to https://github.com/Xhuis/Thaumaturgy.
 
 - - -
 
