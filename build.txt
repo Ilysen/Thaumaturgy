@@ -1,3 +1,6 @@
 author = Xhuis
+
 version = 1.0.0
+
 displayName = Thaumaturgy
+homepage = https://github.com/Xhuis/Thaumaturgy
