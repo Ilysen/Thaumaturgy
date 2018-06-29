@@ -9,7 +9,7 @@ Examples of recipes added by Thaumaturgy use include transmuting 25 crimstone in
 
 A mod like Recipe Browser is highly recommended!
 
-You are free to decompile, modify etc. this mod under the MIT License.
+You are free to decompile, modify etc. this mod under the MIT License. The mod is available in-game through the mod browser, and will always be up-to-date.
 
 # Credit Where Due
 
