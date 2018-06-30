@@ -19,7 +19,7 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Jun. 30, 2018
 
-### 1.0.6
+#### 1.0.7
 * Temporarily removed healing elixir recipes due to bugs; quick heal causes them to be used up
 
 ### Jun. 29, 2018
