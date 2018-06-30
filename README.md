@@ -19,10 +19,12 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Jun. 29, 2018
 
+#### 1.0.5
+* Modified healing elixir sprites to be more in-line with the main game
+
 #### 1.0.3
 * Added mod browser icon and changed changelog entry in the description.
 
 #### 1.0.0
-
 * Initial release and publication to GitHub.
 * Licensed under MIT.
