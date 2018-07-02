@@ -19,9 +19,10 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Jul. 1, 2018
 
-#### 1.0.9.1
+#### 1.0.9.2
 * Migration to new versioning system! Now W.X.Y.Z, where W is major release, X is large patch, Y is minor patch, and Z is tweak
 * Massively reduced duplication rates on all recipes
+* Made thaum noms slightly more expensive
 
 #### 1.0.9
 * Integrated recipes for Zerg and Zen potions from Calamity
