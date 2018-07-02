@@ -17,6 +17,16 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jul. 1, 2018
+
+#### 1.0.9
+* Integrated recipes for Zerg and Zen potions from Calamity
+
+#### 1.0.8
+* Fixed an improper recipe for glowing mushroom duplication
+* Added transmutation between wood types
+* Added a recipe for spellbound water before Skeletron is defeated
+
 ### Jun. 30, 2018
 
 #### 1.0.7

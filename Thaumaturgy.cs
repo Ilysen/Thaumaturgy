@@ -134,6 +134,15 @@ namespace Thaumaturgy
             // Auric conversion ratios are different between potions. //
             // These recipes require a transmutation focus. //
 
+            // Spellbound water - purchased after Skeletron or made costily earlier //
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.BottledWater);
+            recipe.AddIngredient(this.ItemType("AuricShard"), 3);
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(this.ItemType("SpellboundWater"));
+            recipe.AddRecipe();
+
             // Low-tier combat potions - 3/shard //
             //Ironskin
             recipe = new ModRecipe(this);
@@ -595,6 +604,28 @@ namespace Thaumaturgy
                 recipe.AddTile(this.TileType("TransmutationFocus"));
                 recipe.AddTile(TileID.Bottles);
                 recipe.SetResult(Calamity.ItemType("YharimsStimulants"));
+                recipe.AddRecipe();
+
+                //Zerg
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(this.ItemType("SpellboundWater"));
+                recipe.AddIngredient(ItemID.Shuriken);
+                recipe.AddIngredient(this.ItemType("AuricShard"));
+                recipe.AddTile(this.TileType("Thaumatrestle"));
+                recipe.AddTile(this.TileType("TransmutationFocus"));
+                recipe.AddTile(TileID.Bottles);
+                recipe.SetResult(Calamity.ItemType("ZergPotion"));
+                recipe.AddRecipe();
+
+                //Zen
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(this.ItemType("SpellboundWater"));
+                recipe.AddIngredient(ItemID.Cloud);
+                recipe.AddIngredient(this.ItemType("AuricShard"));
+                recipe.AddTile(this.TileType("Thaumatrestle"));
+                recipe.AddTile(this.TileType("TransmutationFocus"));
+                recipe.AddTile(TileID.Bottles);
+                recipe.SetResult(Calamity.ItemType("ZenPotion"));
                 recipe.AddRecipe();
             }
 
@@ -1193,6 +1224,63 @@ namespace Thaumaturgy
             recipe.SetResult(ItemID.BlackLens);
             recipe.AddRecipe();
 
+            //Wood types between one another
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("Wood", 25);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("TransmutationFocus"));
+            recipe.SetResult(ItemID.Wood, 25);
+            recipe.AddRecipe();
+            
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("Wood", 25);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("TransmutationFocus"));
+            recipe.SetResult(ItemID.BorealWood, 25);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("Wood", 25);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("TransmutationFocus"));
+            recipe.SetResult(ItemID.RichMahogany, 25);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("Wood", 25);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("TransmutationFocus"));
+            recipe.SetResult(ItemID.Shadewood, 25);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("Wood", 25);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("TransmutationFocus"));
+            recipe.SetResult(ItemID.Ebonwood, 25);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("Wood", 25);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("TransmutationFocus"));
+            recipe.SetResult(ItemID.PalmWood, 25);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("Wood", 25);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("TransmutationFocus"));
+            recipe.SetResult(ItemID.Pearlwood, 25);
+            recipe.AddRecipe();
+
             /////////////////
             // REPLICATION //
             /////////////////
@@ -1231,7 +1319,7 @@ namespace Thaumaturgy
 
             //Wood x 75
             recipe = new ModRecipe(this);
-            recipe.AddIngredient(ItemID.Wood);
+            recipe.AddRecipeGroup("Wood");
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
@@ -1328,13 +1416,13 @@ namespace Thaumaturgy
             recipe.SetResult(ItemID.PinkGel, 5);
             recipe.AddRecipe();
 
-            //Glowing Mushroom x 5
+            //Glowing Mushroom x 3
             recipe = new ModRecipe(this);
-            recipe.AddIngredient(ItemID.Cloud);
+            recipe.AddIngredient(ItemID.GlowingMushroom);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.GlowingMushroom, 5);
+            recipe.SetResult(ItemID.GlowingMushroom, 3);
             recipe.AddRecipe();
 
 
