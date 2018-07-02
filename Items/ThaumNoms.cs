@@ -33,7 +33,7 @@ namespace Thaumaturgy.Items
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.GrassSeeds);
-            recipe.AddIngredient(ItemID.Pumpkin);
+            recipe.AddIngredient(ItemID.Pumpkin, 5);
             recipe.AddIngredient(mod.ItemType("AuricShard"));
             recipe.AddTile(TileID.CookingPots);
             recipe.AddTile(mod.TileType("Thaumatrestle"));

@@ -1290,115 +1290,106 @@ namespace Thaumaturgy
             // Valuable Hardmode materials require a celestial focus. //
 
             // MUNDANE //
-            //Dirt x 75
+            //Dirt x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.DirtBlock);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.DirtBlock, 75);
+            recipe.SetResult(ItemID.DirtBlock, 25);
             recipe.AddRecipe();
 
-            //Stone x 75
+            //Stone x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.StoneBlock);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.StoneBlock, 75);
+            recipe.SetResult(ItemID.StoneBlock, 25);
             recipe.AddRecipe();
 
-            //Clay x 75
+            //Clay x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.ClayBlock);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.ClayBlock, 75);
+            recipe.SetResult(ItemID.ClayBlock, 25);
             recipe.AddRecipe();
 
-            //Wood x 75
+            //Wood x 25
             recipe = new ModRecipe(this);
             recipe.AddRecipeGroup("Wood");
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.Wood, 75);
+            recipe.SetResult(ItemID.Wood, 25);
             recipe.AddRecipe();
 
-            //Sand x 75
+            //Sand x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SandBlock);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.SandBlock, 75);
+            recipe.SetResult(ItemID.SandBlock, 25);
             recipe.AddRecipe();
 
-            //Mud x 75
+            //Mud x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.MudBlock);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.MudBlock, 75);
+            recipe.SetResult(ItemID.MudBlock, 25);
             recipe.AddRecipe();
 
-            //Snow x 75
+            //Snow x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SnowBlock);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.SnowBlock, 75);
+            recipe.SetResult(ItemID.SnowBlock, 25);
             recipe.AddRecipe();
 
-            //Ice x 75
+            //Ice x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.IceBlock);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.IceBlock, 75);
+            recipe.SetResult(ItemID.IceBlock, 25);
             recipe.AddRecipe();
 
-            //Ash x 75
+            //Ash x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.AshBlock);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.AshBlock, 75);
+            recipe.SetResult(ItemID.AshBlock, 25);
             recipe.AddRecipe();
 
-            //Granite x 75
+            //Granite x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.Granite);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.Granite, 75);
+            recipe.SetResult(ItemID.Granite, 25);
             recipe.AddRecipe();
 
-            //Marble x 75
+            //Marble x 25
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.Marble);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.Marble, 75);
+            recipe.SetResult(ItemID.Marble, 25);
             recipe.AddRecipe();
 
-            //Cloud x 20
-            recipe = new ModRecipe(this);
-            recipe.AddIngredient(ItemID.Cloud);
-            recipe.AddIngredient(this.ItemType("AuricShard"));
-            recipe.AddTile(this.TileType("Thaumatrestle"));
-            recipe.AddTile(this.TileType("ReplicationFocus"));
-            recipe.SetResult(ItemID.Cloud, 20);
-            recipe.AddRecipe();
-
-            //Gel x 20
+            //Gel x 5
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.Gel);
             recipe.AddIngredient(this.ItemType("AuricShard"));
@@ -1430,103 +1421,103 @@ namespace Thaumaturgy
 
 
             // KALEIDOSCOPIC //
-            //Copper Ore x 25
+            //Copper Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.CopperOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.CopperOre, 25);
+            recipe.SetResult(ItemID.CopperOre, 3);
             recipe.AddRecipe();
 
-            //Tin Ore x 25
+            //Tin Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.TinOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.TinOre, 25);
+            recipe.SetResult(ItemID.TinOre, 3);
             recipe.AddRecipe();
 
-            //Iron Ore x 25
+            //Iron Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.IronOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.IronOre, 25);
+            recipe.SetResult(ItemID.IronOre, 3);
             recipe.AddRecipe();
 
-            //Lead Ore x 25
+            //Lead Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.LeadOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.LeadOre, 25);
+            recipe.SetResult(ItemID.LeadOre, 3);
             recipe.AddRecipe();
 
-            //Silver Ore x 25
+            //Silver Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SilverOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.SilverOre, 25);
+            recipe.SetResult(ItemID.SilverOre, 3);
             recipe.AddRecipe();
 
-            //Tungsten Ore x 25
+            //Tungsten Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.TungstenOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.TungstenOre, 25);
+            recipe.SetResult(ItemID.TungstenOre, 3);
             recipe.AddRecipe();
 
-            //Gold Ore x 25
+            //Gold Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.TinOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.GoldOre, 25);
+            recipe.SetResult(ItemID.GoldOre, 3);
             recipe.AddRecipe();
 
-            //Platinum Ore x 25
+            //Platinum Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.PlatinumOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.PlatinumOre, 25);
+            recipe.SetResult(ItemID.PlatinumOre, 3);
             recipe.AddRecipe();
 
-            //Meteorite x 25
+            //Meteorite x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.Meteorite);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.Meteorite, 25);
+            recipe.SetResult(ItemID.Meteorite, 3);
             recipe.AddRecipe();
 
-            //Obsidian x 25
+            //Obsidian x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.Obsidian);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.Obsidian, 25);
+            recipe.SetResult(ItemID.Obsidian, 3);
             recipe.AddRecipe();
 
-            //Hellstone x 25
+            //Hellstone x 2
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.Hellstone);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
-            recipe.SetResult(ItemID.Hellstone, 25);
+            recipe.SetResult(ItemID.Hellstone, 2);
             recipe.AddRecipe();
 
             //Topaz x 5
@@ -1592,162 +1583,171 @@ namespace Thaumaturgy
             recipe.SetResult(ItemID.LifeCrystal, 2);
             recipe.AddRecipe();
 
+            //Cloud x 5
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.Cloud);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("KaleidoscopicFocus"));
+            recipe.SetResult(ItemID.Cloud, 5);
+            recipe.AddRecipe();
+
 
 
 
 
             // CELESTIAL //
-            //Cobalt Ore x 25
+            //Cobalt Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.CobaltOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.CobaltOre, 25);
+            recipe.SetResult(ItemID.CobaltOre, 3);
             recipe.AddRecipe();
 
-            //Palladium Ore x 25
+            //Palladium Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.PalladiumOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.PalladiumOre, 25);
+            recipe.SetResult(ItemID.PalladiumOre, 3);
             recipe.AddRecipe();
 
-            //Mythril Ore x 25
+            //Mythril Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.MythrilOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.MythrilOre, 25);
+            recipe.SetResult(ItemID.MythrilOre, 3);
             recipe.AddRecipe();
 
-            //Orichalcum Ore x 25
+            //Orichalcum Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.OrichalcumOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.OrichalcumOre, 25);
+            recipe.SetResult(ItemID.OrichalcumOre, 3);
             recipe.AddRecipe();
 
-            //Adamantite Ore x 25
+            //Adamantite Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.AdamantiteOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.AdamantiteOre, 25);
+            recipe.SetResult(ItemID.AdamantiteOre, 3);
             recipe.AddRecipe();
 
-            //Titanium Ore x 25
+            //Titanium Ore x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.TitaniumOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.TitaniumOre, 25);
+            recipe.SetResult(ItemID.TitaniumOre, 3);
             recipe.AddRecipe();
 
-            //Soul of Light x 25
+            //Soul of Light x 5
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SoulofLight);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.SoulofLight, 25);
+            recipe.SetResult(ItemID.SoulofLight, 5);
             recipe.AddRecipe();
 
-            //Soul of Night x 25
+            //Soul of Night x 5
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SoulofNight);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.SoulofNight, 25);
+            recipe.SetResult(ItemID.SoulofNight, 5);
             recipe.AddRecipe();
 
-            //Soul of Flight x 25
+            //Soul of Flight x 5
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SoulofFlight);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.SoulofFlight, 25);
+            recipe.SetResult(ItemID.SoulofFlight, 5);
             recipe.AddRecipe();
 
-            //Soul of Fright x 10
+            //Soul of Fright x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SoulofFright);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.SoulofFright, 10);
+            recipe.SetResult(ItemID.SoulofFright, 3);
             recipe.AddRecipe();
 
-            //Soul of Might x 10
+            //Soul of Might x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SoulofMight);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.SoulofMight, 10);
+            recipe.SetResult(ItemID.SoulofMight, 3);
             recipe.AddRecipe();
 
-            //Soul of Sight x 10
+            //Soul of Sight x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SoulofSight);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.SoulofSight, 10);
+            recipe.SetResult(ItemID.SoulofSight, 3);
             recipe.AddRecipe();
 
-            //Hallowed Bar x 10
+            //Hallowed Bar x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.HallowedBar);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.HallowedBar, 10);
+            recipe.SetResult(ItemID.HallowedBar, 3);
             recipe.AddRecipe();
 
-            //Crystal Shard x 10
+            //Crystal Shard x 5
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.CrystalShard);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.CrystalShard, 10);
+            recipe.SetResult(ItemID.CrystalShard, 5);
             recipe.AddRecipe();
 
-            //Cursed Flames x 10
+            //Cursed Flames x 5
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.CursedFlame);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.CursedFlame, 10);
+            recipe.SetResult(ItemID.CursedFlame, 5);
             recipe.AddRecipe();
 
-            //Ichor x 10
+            //Ichor x 5
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.Ichor);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.Ichor, 10);
+            recipe.SetResult(ItemID.Ichor, 5);
             recipe.AddRecipe();
 
-            //Chlorophyte x 5
+            //Chlorophyte x 3
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.ChlorophyteOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.ChlorophyteOre, 5);
+            recipe.SetResult(ItemID.ChlorophyteOre, 3);
             recipe.AddRecipe();
 
             //Vortex Fragment x 2
