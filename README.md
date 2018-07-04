@@ -17,7 +17,17 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jul. 4, 2018
+
+#### 1.0.10.2
+* Happy Independence Day for American users!
+* Some minor optimizations in code
+* Begun work on late pre-hardmode wing substitute; not craftable yet
+
 ### Jul. 3, 2018
+
+#### 1.0.10.1
+* Added recipes for PDA composite ingredients using thaumaturgy, some unobtainable until hardmode.
 
 #### 1.0.10.0
 * Added a costly recipe for the Ankh Charm for use in mid-to-late hardmode.

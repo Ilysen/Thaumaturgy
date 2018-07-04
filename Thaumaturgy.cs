@@ -32,6 +32,13 @@ namespace Thaumaturgy
             });
             RecipeGroup.RegisterGroup("Thaumaturgy:GoldOrPlatinum", group);
 
+            group = new RecipeGroup(() => "Gold or Platinum Bar", new int[]
+            {
+                    ItemID.GoldBar,
+                    ItemID.PlatinumBar
+            });
+            RecipeGroup.RegisterGroup("Thaumaturgy:GoldBar", group);
+
             group = new RecipeGroup(() => "Crimtane or Demonite Ore", new int[]
             {
                     ItemID.CrimtaneOre,
@@ -157,6 +164,57 @@ namespace Thaumaturgy
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.IceSkates);
+            recipe.AddRecipe();
+
+            //Fish Finder - 5 iron bars, 2 gold bars, 10 wire, 1 radar, 3 crystal shards, 5 sapphires, 1 mechanical lens, and 1 auric core
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("IronBar", 5);
+            recipe.AddRecipeGroup("Thaumaturgy:GoldBar", 2);
+            recipe.AddIngredient(ItemID.Wire, 10);
+            recipe.AddIngredient(ItemID.Radar, 1);
+            recipe.AddIngredient(ItemID.CrystalShard, 3);
+            recipe.AddIngredient(ItemID.Sapphire, 5);
+            recipe.AddIngredient(ItemID.MechanicalLens, 1);
+            recipe.AddIngredient(this.ItemType("AuricCore"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.FishFinder);
+            recipe.AddRecipe();
+
+            //Goblin Tech - 10 iron bars, 15 wire, 50 spiky balls, 2 hellstone, and 1 auric core
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("IronBar", 10);
+            recipe.AddIngredient(ItemID.Wire, 15);
+            recipe.AddIngredient(ItemID.SpikyBall, 50);
+            recipe.AddIngredient(ItemID.Hellstone, 2);
+            recipe.AddIngredient(this.ItemType("AuricCore"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.GoblinTech);
+            recipe.AddRecipe();
+
+            //GPS - 3 iron bars, 3 gold bars, 20 wire, 2 sapphires, and 1 auric core
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("IronBar", 3);
+            recipe.AddRecipeGroup("Thaumaturgy:GoldBar", 3);
+            recipe.AddIngredient(ItemID.Wire, 20);
+            recipe.AddIngredient(ItemID.Sapphire, 2);
+            recipe.AddIngredient(this.ItemType("AuricCore"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.GPS);
+            recipe.AddRecipe();
+
+            //R.E.K. 3000 - 5 iron bars, 1 gold bar, 30 wire, 2 books, and 1 auric core
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("IronBar", 5);
+            recipe.AddRecipeGroup("Thaumaturgy:GoldBar", 1);
+            recipe.AddIngredient(ItemID.Wire, 30);
+            recipe.AddIngredient(ItemID.Book, 2);
+            recipe.AddIngredient(this.ItemType("AuricCore"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.REK);
             recipe.AddRecipe();
 
             //Ankh Charm - 30 pixie dust, 30 ichor/cursed flames, 10 hallow seeds, 10 crimson/corruption seeds, 100 bones, 15 of each soul, 5 mana crystals, 5 life crystals, and 25 auric shards
