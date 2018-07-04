@@ -17,6 +17,14 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jul. 3, 2018
+
+#### 1.0.10.0
+* Added a costly recipe for the Ankh Charm for use in mid-to-late hardmode.
+* Added a recipe for Ice Skates.
+* Accessory recipes now require a Synthesis Focus.
+* Removed the recipe for Spellbound Water; it's now purchase-only.
+
 ### Jul. 1, 2018
 
 #### 1.0.9.2

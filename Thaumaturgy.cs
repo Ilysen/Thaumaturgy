@@ -56,6 +56,20 @@ namespace Thaumaturgy
                     ItemID.RedSnapper
             });
             RecipeGroup.RegisterGroup("Thaumaturgy:PreyFish", group);
+
+            group = new RecipeGroup(() => "Ichor or Cursed Flames", new int[]
+            {
+                    ItemID.Ichor,
+                    ItemID.CursedFlame
+            });
+            RecipeGroup.RegisterGroup("Thaumaturgy:IchororCursedFlames", group);
+
+            group = new RecipeGroup(() => "Any Evil Seed", new int[]
+            {
+                    ItemID.CrimsonSeeds,
+                    ItemID.CorruptSeeds
+            });
+            RecipeGroup.RegisterGroup("Thaumaturgy:EvilSeeds", group);
         }
 
         public override void AddRecipes() //vanilla items are craftable using thaumaturgy!
@@ -71,6 +85,7 @@ namespace Thaumaturgy
             recipe.AddIngredient(ItemID.Glass, 5);
             recipe.AddIngredient(this.ItemType("AuricShard"), 3);
             recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.MagicMirror);
             recipe.AddRecipe();
 
@@ -80,6 +95,7 @@ namespace Thaumaturgy
             recipe.AddIngredient(ItemID.Cloud, 20);
             recipe.AddIngredient(this.ItemType("AuricShard"), 3);
             recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.CloudinaBottle);
             recipe.AddRecipe();
 
@@ -89,6 +105,7 @@ namespace Thaumaturgy
             recipe.AddIngredient(ItemID.SnowBlock, 30);
             recipe.AddIngredient(this.ItemType("AuricShard"), 6);
             recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.BlizzardinaBottle);
             recipe.AddRecipe();
 
@@ -98,6 +115,7 @@ namespace Thaumaturgy
             recipe.AddIngredient(ItemID.SandBlock, 50);
             recipe.AddIngredient(this.ItemType("AuricCore"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.SandstorminaBottle);
             recipe.AddRecipe();
 
@@ -107,6 +125,7 @@ namespace Thaumaturgy
             recipe.AddIngredient(ItemID.SwiftnessPotion);
             recipe.AddIngredient(this.ItemType("AuricShard"), 3);
             recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.HermesBoots);
             recipe.AddRecipe();
 
@@ -115,6 +134,7 @@ namespace Thaumaturgy
             recipe.AddRecipeGroup("IronBar", 5);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.Aglet);
             recipe.AddRecipe();
 
@@ -125,7 +145,39 @@ namespace Thaumaturgy
             recipe.AddIngredient(ItemID.Vine, 2);
             recipe.AddIngredient(this.ItemType("AuricShard"), 3);
             recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.AnkletoftheWind);
+            recipe.AddRecipe();
+
+            //Ice Skates - 3 leather, 5 iron bars, and 1 auric shard
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.Leather, 3);
+            recipe.AddRecipeGroup("IronBar", 5);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.IceSkates);
+            recipe.AddRecipe();
+
+            //Ankh Charm - 30 pixie dust, 30 ichor/cursed flames, 10 hallow seeds, 10 crimson/corruption seeds, 100 bones, 15 of each soul, 5 mana crystals, 5 life crystals, and 25 auric shards
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.PixieDust, 30);
+            recipe.AddRecipeGroup("Thaumaturgy:IchororCursedFlames", 30);
+            recipe.AddIngredient(ItemID.HallowedSeeds, 10);
+            recipe.AddRecipeGroup("Thaumaturgy:EvilSeeds", 10);
+            recipe.AddIngredient(ItemID.Bone, 100);
+            recipe.AddIngredient(ItemID.SoulofFlight, 15);
+            recipe.AddIngredient(ItemID.SoulofLight, 15);
+            recipe.AddIngredient(ItemID.SoulofNight, 15);
+            recipe.AddIngredient(ItemID.SoulofMight, 15);
+            recipe.AddIngredient(ItemID.SoulofSight, 15);
+            recipe.AddIngredient(ItemID.SoulofFright, 15);
+            recipe.AddIngredient(ItemID.LifeCrystal, 5);
+            recipe.AddIngredient(ItemID.ManaCrystal, 5);
+            recipe.AddIngredient(this.ItemType("AuricShard"), 25);
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.AnkhCharm);
             recipe.AddRecipe();
 
             /////////////
@@ -133,15 +185,6 @@ namespace Thaumaturgy
             /////////////
             // Auric conversion ratios are different between potions. //
             // These recipes require a transmutation focus. //
-
-            // Spellbound water - purchased after Skeletron or made costily earlier //
-            recipe = new ModRecipe(this);
-            recipe.AddIngredient(ItemID.BottledWater);
-            recipe.AddIngredient(this.ItemType("AuricShard"), 3);
-            recipe.AddTile(this.TileType("Thaumatrestle"));
-            recipe.AddTile(this.TileType("SynthesisFocus"));
-            recipe.SetResult(this.ItemType("SpellboundWater"));
-            recipe.AddRecipe();
 
             // Low-tier combat potions - 3/shard //
             //Ironskin
