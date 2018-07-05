@@ -1,16 +1,19 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace Thaumaturgy.Items
 {
     [AutoloadEquip(EquipType.Wings)]
-    public class ThaumostaticHarness : ModItem
+    public class AurelianHarness : ModItem
     {
+        int soundtimer = 0;
+
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Thaumostatic Harness");
-            Tooltip.SetDefault("A chest-strapped contraption that expels magic around it to nullify gravity\nUnreliable, but does not impede movement\n*This item is work-in-progress*");
+            DisplayName.SetDefault("Aurelian Harness");
+            Tooltip.SetDefault("A chest-strapped cylinder with two exhaust ports mounted on its sides\nChannels magic through meteorite, obsidian-sealed pipes to allow flight\nCruder than wings, and prone to malfunction");
         }
 
         public override void SetDefaults()
@@ -46,28 +49,45 @@ namespace Thaumaturgy.Items
 
         public override bool WingUpdate(Player player, bool inUse)
         {
-            if(Main.rand.Next(300) == 0 && player.FindBuffIndex(BuffID.VortexDebuff) == -1 && player.wingTime < player.wingTimeMax * 0.75 && player.wingTime != 0)
+            if(Main.rand.Next(500) == 0 && player.FindBuffIndex(BuffID.OnFire) == -1 && player.wingTime < player.wingTimeMax * 0.75 && player.wingTime != 0)
             {
                 Main.PlaySound(SoundID.DD2_GoblinBomb);
                 Main.PlaySound(SoundID.Item44);
                 player.AddBuff(BuffID.VortexDebuff, 300, true);
                 player.AddBuff(BuffID.OnFire, 300, true);
             }
-            return false;
+            if(player.velocity.Y < 0)
+            {
+                Vector2 position = player.Center;
+                position.X -= (player.direction == 1 ? 30f : 0f * player.direction);
+                Dust.NewDust(position, 30, 30, 15, 0f, 10f, 0, default(Color), 1.447368f);
+                if (soundtimer < 5)
+                {
+                    soundtimer++;
+                }
+                else
+                {
+                    Main.PlaySound(SoundID.Item9.WithVolume(0.5f), player.Center);
+                    soundtimer = 0;
+                }
+            }
+            return true;
         }
 
-        /*public override void AddRecipes()
+        public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Goggles);
-            recipe.AddIngredient(ItemID.SpelunkerPotion);
-            recipe.AddIngredient(ItemID.HunterPotion);
-            recipe.AddIngredient(ItemID.TrapsightPotion);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 2);
+            recipe.AddRecipeGroup("Wood", 25);
+            recipe.AddRecipeGroup("IronBar", 10);
+            recipe.AddIngredient(ItemID.Wire, 30);
+            recipe.AddIngredient(ItemID.MeteoriteBar, 3);
+            recipe.AddIngredient(ItemID.Obsidian, 5);
+            recipe.AddIngredient(mod.ItemType("AuricCore"), 5);
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 25);
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.AddRecipe();
-        }*/
+        }
     }
 }

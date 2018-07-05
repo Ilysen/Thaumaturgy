@@ -17,6 +17,12 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jul. 5, 2018
+
+#### 1.0.10.3
+* Removed Independence Day mod icon.
+* Added the Aurelian Harness, a pre-hardmode substitute for wings. Craft it with wood, iron/lead, wire, meteorite, obsidian, and auric materials.
+
 ### Jul. 4, 2018
 
 #### 1.0.10.2
