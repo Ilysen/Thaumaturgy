@@ -17,6 +17,15 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jul. 10, 2018
+
+#### 1.0.11.0
+* Re-added healing elixirs! You can now craft non-consumable healing potions using thaumaturgy.
+* Added three new potions: Avarice, Evasion, and Void.
+  * Avarice potions increase coin pickup range. Craft them with daybloom and a silver coin.
+  * Evasion potions allow a tabi dash if no dash item is active. Craft them with a shiverthorn and moonglow.
+  * Void potions cause mana expenditure below 50% mana to drain health instead. Craft them with fallen stars, shiverthorn, and obsidian.
+
 ### Jul. 5, 2018
 
 #### 1.0.10.3

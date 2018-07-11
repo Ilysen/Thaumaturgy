@@ -9,7 +9,7 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Healing Elixir");
-            Tooltip.SetDefault("Not consumed upon use\n*THIS IS CURRENTLY BUGGED*");
+            Tooltip.SetDefault("Not consumed upon use");
         }
 
         public override void SetDefaults()
@@ -28,7 +28,12 @@ namespace Thaumaturgy.Items
             item.healLife = 100;
         }
 
-        /*public override void AddRecipes()
+        public override bool ConsumeItem(Player player)
+        {
+            return false; //This override is necessary for quick heal
+        }
+
+        public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.HealingPotion, 20);
@@ -39,7 +44,7 @@ namespace Thaumaturgy.Items
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.SetResult(this);
             recipe.AddRecipe();
-        }*/
+        }
     }
 
     public class ElixirHealingGreater : ModItem
@@ -47,7 +52,7 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Greater Healing Elixir");
-            Tooltip.SetDefault("Not consumed upon use\n*THIS IS CURRENTLY BUGGED*");
+            Tooltip.SetDefault("Not consumed upon use");
         }
 
         public override void SetDefaults()
@@ -66,7 +71,12 @@ namespace Thaumaturgy.Items
             item.healLife = 150;
         }
 
-        /*public override void AddRecipes()
+        public override bool ConsumeItem(Player player)
+        {
+            return false;
+        }
+
+        public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.GreaterHealingPotion, 20);
@@ -77,14 +87,14 @@ namespace Thaumaturgy.Items
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.SetResult(this);
             recipe.AddRecipe();
-        }*/
+        }
     }
 
     public class ElixirHealingSuper : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Super Healing Elixir\n*THIS IS CURRENTLY BUGGED*");
+            DisplayName.SetDefault("Super Healing Elixir");
             Tooltip.SetDefault("Not consumed upon use");
         }
 
@@ -104,7 +114,12 @@ namespace Thaumaturgy.Items
             item.healLife = 200;
         }
 
-        /*public override void AddRecipes()
+        public override bool ConsumeItem(Player player)
+        {
+            return false;
+        }
+
+        public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.SuperHealingPotion, 20);
@@ -115,7 +130,7 @@ namespace Thaumaturgy.Items
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.SetResult(this);
             recipe.AddRecipe();
-        }*/
+        }
     }
 
     public class ElixirPanacea : ModItem
@@ -123,7 +138,7 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Max Healing Elixir");
-            Tooltip.SetDefault("Heals 50% maximum health\nNot consumed upon use\n*THIS IS CURRENTLY BUGGED*");
+            Tooltip.SetDefault("Healing amount will change on use to half your maximum health\nNot consumed upon use");
         }
 
         public override void SetDefaults()
@@ -138,7 +153,13 @@ namespace Thaumaturgy.Items
             item.height = 20;
             item.value = Item.sellPrice(1, 0, 0, 0);
             item.rare = 3;
+            item.healLife = 200;
             item.potion = true;
+        }
+
+        public override bool ConsumeItem(Player player)
+        {
+            return false;
         }
 
         public override bool CanUseItem(Player player) //we'll assign the amount to heal here
@@ -148,7 +169,7 @@ namespace Thaumaturgy.Items
             return true;
         }
 
-        /*public override void AddRecipes()
+        public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("ElixirHealing"));
@@ -161,7 +182,7 @@ namespace Thaumaturgy.Items
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.SetResult(this);
             recipe.AddRecipe();
-        }*/
+        }
     }
 
     public class ElixirFortitude : ModItem
