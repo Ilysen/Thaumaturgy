@@ -1,3 +1,3 @@
 Thaumaturgy adds an upgraded work bench, the Thaumatrestle, which is sold by a new town NPC, the Thaumaturge, a haunted academic who wants to put his skills to use. The Thaumatrestle can be used to break down fallen stars and mana crystals into power sources - auric shards and auric cores - which can then be used to craft, shape, transform, brew, and change objects in many ways. The mod takes heavy inspiration from, but is not similar to, the Minecraft mod of a similar name, Thaumcraft, by Azanor.
 
-For more details about the mod, plus the source code and change log, head to https://github.com/Xhuis/Thaumaturgy.
+For more details about the mod, the source code, and full change log for all versions, head to https://github.com/Xhuis/Thaumaturgy.
