@@ -21,7 +21,7 @@ namespace Thaumaturgy.Buffs
             if(player.statMana <= player.statManaMax2 * 0.5)
             {
                 player.statLife--;
-                player.statMana = (int)(player.statManaMax * 0.5);
+                player.statMana += 3;
                 if(player.statLife <= 0)
                 {
                     PlayerDeathReason damageSource = PlayerDeathReason.ByCustomReason(player.name + " was eaten by hungry shadows.");

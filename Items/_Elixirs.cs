@@ -4,6 +4,10 @@ using Terraria.ModLoader;
  
 namespace Thaumaturgy.Items
 {
+    //////////////
+    // HEALING //
+    /////////////
+
     public class ElixirHealing : ModItem
     {
         public override void SetStaticDefaults()
@@ -184,6 +188,10 @@ namespace Thaumaturgy.Items
             recipe.AddRecipe();
         }
     }
+
+    ///////////////////
+    // VANILLA BUFFS //
+    ///////////////////
 
     public class ElixirFortitude : ModItem
     {
@@ -731,4 +739,124 @@ namespace Thaumaturgy.Items
             return true;
         }
     }
+
+    ///////////////////////
+    // THAUMATURGY BUFFS //
+    ///////////////////////
+
+    public class ElixirAvarice : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Auric Elixir of the Baron's Hoard");
+            Tooltip.SetDefault("Increases coin pickup range\nNot consumed upon use");
+        }
+
+        public override void SetDefaults()
+        {
+            item.UseSound = SoundID.Item3;
+            item.useStyle = 2;
+            item.useTurn = true;
+            item.useAnimation = 17;
+            item.useTime = 17;
+            item.maxStack = 99;
+            item.width = 20;
+            item.height = 20;
+            item.value = Item.sellPrice(0, 1, 0, 0);
+            item.rare = 3;
+            item.buffType = mod.BuffType("Avarice");
+            item.buffTime = 36000;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("PotionAvarice"), 5);
+            recipe.AddIngredient(mod.ItemType("SpellboundWater"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+
+    public class ElixirEvasion : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Auric Elixir of Nimbleness");
+            Tooltip.SetDefault("Enables dashing\nNot consumed upon use");
+        }
+
+        public override void SetDefaults()
+        {
+            item.UseSound = SoundID.Item3;
+            item.useStyle = 2;
+            item.useTurn = true;
+            item.useAnimation = 17;
+            item.useTime = 17;
+            item.maxStack = 99;
+            item.width = 20;
+            item.height = 20;
+            item.value = Item.sellPrice(0, 1, 0, 0);
+            item.rare = 3;
+            item.buffType = mod.BuffType("Evasion");
+            item.buffTime = 36000;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("PotionEvasion"), 5);
+            recipe.AddIngredient(mod.ItemType("SpellboundWater"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+
+    public class ElixirVoid : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Auric Elixir of Entwined Tendrils");
+            Tooltip.SetDefault("Life will be consumed to preserve mana\nNot consumed upon use");
+        }
+
+        public override void SetDefaults()
+        {
+            item.UseSound = SoundID.Item3;
+            item.useStyle = 2;
+            item.useTurn = true;
+            item.useAnimation = 17;
+            item.useTime = 17;
+            item.maxStack = 99;
+            item.width = 20;
+            item.height = 20;
+            item.value = Item.sellPrice(0, 1, 0, 0);
+            item.rare = 3;
+            item.buffType = mod.BuffType("Void");
+            item.buffTime = 36000;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("PotionVoid"), 5);
+            recipe.AddIngredient(mod.ItemType("SpellboundWater"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+
+
 }

@@ -17,6 +17,12 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jul. 11, 2018
+
+#### 1.0.11.1
+* Adjusted the Void buff. Now it regenerates mana instead of setting the amount.
+* Added elixir varieties of Avarice, Evasion, and Void potions.
+
 ### Jul. 10, 2018
 
 #### 1.0.11.0
