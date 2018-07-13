@@ -14,8 +14,14 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 # Credit Where Due
 
 * **Xhuis** - Code, sprites, writing.
+* **Re-Logic** - Terraria, and the sprites I used as reference/basis for Thaumaturgy's!
 
 # Changelog
+
+### Jul. 13, 2018
+
+#### 1.0.12.0
+* Added the Massive Terran Bore, a quick and easy hellevator solution similar to the Instavator from Fargo's mod.
 
 ### Jul. 11, 2018
 
