@@ -18,6 +18,15 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jul. 14, 2018
+
+#### 1.0.13.0
+* Added the Glacial Highway potion, which forms a bridge of ice beneath you as you walk. Craft it with shiverthorn and a snow cloud.
+  * Also added the Elixir of Ice Floes, the elixir form of the Glacial Highway potion.
+* Recolored the Draught of Daring to reduce contrast clashing in its sprite.
+* Elixirs and Draughts now only stack to 1 due to their reusable nature.
+* Doubled the duration of both Draughts, from 15 minutes to 30 minutes.
+
 ### Jul. 13, 2018
 
 #### 1.0.12.0

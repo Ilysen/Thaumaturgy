@@ -23,7 +23,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 10, 0, 0);
@@ -66,7 +66,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 25, 0, 0);
@@ -109,7 +109,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 75, 0, 0);
@@ -152,7 +152,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(1, 0, 0, 0);
@@ -208,7 +208,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -253,7 +253,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -298,7 +298,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -336,7 +336,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -383,7 +383,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -430,7 +430,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -490,7 +490,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -537,7 +537,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -582,7 +582,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -627,7 +627,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -672,7 +672,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -710,7 +710,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -759,7 +759,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -797,7 +797,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);
@@ -810,6 +810,44 @@ namespace Thaumaturgy.Items
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("PotionEvasion"), 5);
+            recipe.AddIngredient(mod.ItemType("SpellboundWater"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+
+    public class ElixirFloes : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Auric Elixir of Ice Floes");
+            Tooltip.SetDefault("Ice forms beneath you as you walk\nNot consumed upon use");
+        }
+
+        public override void SetDefaults()
+        {
+            item.UseSound = SoundID.Item3;
+            item.useStyle = 2;
+            item.useTurn = true;
+            item.useAnimation = 17;
+            item.useTime = 17;
+            item.maxStack = 1;
+            item.width = 20;
+            item.height = 20;
+            item.value = Item.sellPrice(0, 1, 0, 0);
+            item.rare = 3;
+            item.buffType = mod.BuffType("GlacialHighway");
+            item.buffTime = 36000;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("PotionGlacialHighway"), 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
@@ -835,7 +873,7 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 1, 0, 0);

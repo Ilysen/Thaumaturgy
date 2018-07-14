@@ -98,6 +98,53 @@ namespace Thaumaturgy.Items
         }
     }
 
+    public class PotionGlacialHighway : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Glacial Highway Potion");
+            Tooltip.SetDefault("Ice forms beneath you as you walk");
+        }
+
+        public override void SetDefaults()
+        {
+            item.UseSound = SoundID.Item3;
+            item.useStyle = 2;
+            item.useTurn = true;
+            item.useAnimation = 17;
+            item.useTime = 17;
+            item.consumable = true;
+            item.maxStack = 99;
+            item.width = 20;
+            item.height = 20;
+            item.value = Item.sellPrice(0, 0, 25, 0);
+            item.rare = 1;
+            item.buffType = mod.BuffType("GlacialHighway");
+            item.buffTime = 24000;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.BottledWater);
+            recipe.AddIngredient(ItemID.Shiverthorn);
+            recipe.AddIngredient(ItemID.SnowCloudBlock);
+            recipe.AddTile(TileID.Bottles);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("SpellboundWater"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"));
+            recipe.AddIngredient(ItemID.SnowCloudBlock);
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.AddTile(TileID.Bottles);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+
     public class PotionVoid : ModItem
     {
         public override void SetStaticDefaults()
