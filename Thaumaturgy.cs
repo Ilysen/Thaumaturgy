@@ -1897,4 +1897,16 @@ namespace Thaumaturgy
             recipe.AddRecipe();
         }
     }
+
+    class ThaumaturgyGlobalNPC : GlobalNPC
+    {
+        public override void EditSpawnRate(Player player, ref int spawnRate, ref int maxSpawns)
+        {
+            if (player.FindBuffIndex(mod.BuffType("WateryEmbers")) != -1)
+            {
+                spawnRate = (int)(spawnRate / 10f);
+                maxSpawns = (int)(maxSpawns * 10f);
+            }
+        }
+    }
 }

@@ -20,6 +20,11 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Feb. 21, 2019
 
+#### 1.0.15.0
+
+* Added the Potion of Watery Embers, which greatly increases spawn rate.
+* Added a new sprite for the Thaumatrestle.
+
 #### 1.0.14.0
 
 * Further doubled the duration of the Draughts to 1 hour.

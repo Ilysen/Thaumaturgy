@@ -194,4 +194,52 @@ namespace Thaumaturgy.Items
     }
 
 
+    public class PotionWateryEmbers : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Potion of Watery Embers");
+            Tooltip.SetDefault("Even diluted, embers of a water candle flare when ingested\nTremendously increases enemy spawn rate");
+        }
+
+        public override void SetDefaults()
+        {
+            item.UseSound = SoundID.Item3;
+            item.useStyle = 2;
+            item.useTurn = true;
+            item.useAnimation = 17;
+            item.useTime = 17;
+            item.consumable = true;
+            item.maxStack = 99;
+            item.width = 22;
+            item.height = 35;
+            item.value = Item.sellPrice(0, 0, 2, 0);
+            item.rare = 1;
+            item.buffType = mod.BuffType("WateryEmbers");
+            item.buffTime = 18000;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.BottledWater);
+            recipe.AddIngredient(ItemID.Deathweed);
+            recipe.AddIngredient(ItemID.Shiverthorn);
+            recipe.AddIngredient(ItemID.Fireblossom);
+            recipe.AddIngredient(ItemID.Obsidian);
+            recipe.AddTile(TileID.Bottles);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("SpellboundWater"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"));
+            recipe.AddIngredient(ItemID.WaterCandle);
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.AddTile(TileID.Bottles);
+            recipe.SetResult(this, 10);
+            recipe.AddRecipe();
+        }
+    }
 }
