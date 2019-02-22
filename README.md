@@ -30,6 +30,7 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 * Removed the one-time texts for entering Hardmode and defeating Skeletron due to issues with multiplayer.
 * Increased the cost of fallen stars in Hardmode.
 * Removed the message for the Massive Terran Bore due to silliness with the chat log.
+* Draught buffs are now preserved when saving and reloading.
 
 ### Jul. 14, 2018
 

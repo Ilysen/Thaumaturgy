@@ -26,7 +26,7 @@ namespace Thaumaturgy.Items
             item.value = Item.sellPrice(1, 0, 0, 0);
             item.rare = 10;
             item.buffType = mod.BuffType("Determination");
-            item.buffTime = 2160000;
+            item.buffTime = 216000;
         }
 
         public override void AddRecipes()
@@ -69,7 +69,7 @@ namespace Thaumaturgy.Items
             item.value = Item.sellPrice(1, 0, 0, 0);
             item.rare = 10;
             item.buffType = mod.BuffType("Daring");
-            item.buffTime = 2160000;
+            item.buffTime = 216000;
         }
 
         public override void AddRecipes()

@@ -10,7 +10,7 @@ namespace Thaumaturgy.Buffs
         {
             DisplayName.SetDefault("Determination");
             Description.SetDefault("Grants heightened defensive and offensive capabilities, and reduces chance to consume ammo");
-            Main.buffNoSave[Type] = true;
+            Main.buffNoSave[Type] = false;
             Main.debuff[Type] = false;
             canBeCleared = true;
         }

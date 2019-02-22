@@ -10,7 +10,7 @@ namespace Thaumaturgy.Buffs
         {
             DisplayName.SetDefault("Daring");
             Description.SetDefault("Grants true sight, liquid immunity, swimming, and increased mining speed");
-            Main.buffNoSave[Type] = true;
+            Main.buffNoSave[Type] = false;
             Main.debuff[Type] = false;
             canBeCleared = true;
         }
@@ -51,7 +51,7 @@ namespace Thaumaturgy.Buffs
             player.buffImmune[BuffID.Flipper] = true;
             player.buffImmune[BuffID.WaterWalking] = true;
             player.buffImmune[BuffID.Mining] = true;
-            player.buffImmune[mod.buffType("Avarice")] = true;
+            player.buffImmune[mod.BuffType("Avarice")] = true;
         }
     }
 }
