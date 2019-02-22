@@ -9,7 +9,7 @@ namespace Thaumaturgy.Items
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Massive Terran Bore");
-            Tooltip.SetDefault("An impressive technological feat that tunnels through earth\nUse to start it up, causing it to dig downwards until extreme heat destroys it\nThe bore shoves aside the earth into walls, and leaves a rope for safe descent\nDon't use if there's anything important below you");
+            Tooltip.SetDefault("An impressive technological feat that tunnels through earth\nUse to start it up, causing it to dig downwards until extreme heat destroys it\nThe bore shoves aside the earth into walls, and leaves a rope for safe descent\nDon't use if there's anything important below you\nMay require you to reload the world in multiplayer");
         }
 
 		public override void SetDefaults()
@@ -29,7 +29,6 @@ namespace Thaumaturgy.Items
 
         public override bool UseItem(Player player) //HERE BE DRAGONS
         {
-            Main.NewText("The terran bore howls with energy and rockets into the earth!", 0, 255, 0);
             int x = (int)(player.position.X / 16f);
             int y = (int)(player.position.Y / 16f);
             int prog_x = 0;

@@ -1,4 +1,4 @@
-using System.Linq;
+tusing System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -80,20 +80,6 @@ namespace Thaumaturgy.NPCs
 
 			WeightedRandom<string> chat = new WeightedRandom<string>();
 
-            if (sellsSpellboundWater == false && NPC.downedBoss3)
-            {
-                sellsSpellboundWater = true;
-                chat.Add("During your fight with the Dungeon's master, I accidentally dropped an auric shard into my water, and I noticed something. The water was kind of... soaking up the shard's energy. I tinkered a bit, and made a breakthrough.\n\nI can now make spellbound water. It conducts aura better for alchemy, but it's too strong for potions, so I'm not really sure what you could use it for. I'm sure you could find a use, though!");
-                return chat;
-            }
-
-            if (sellsFallenStars == false && Main.hardMode)
-            {
-                sellsFallenStars = true;
-                chat.Add("Something happened while you were gone. I um. Had a seizure... my thaumatrestle is in shambles. But I learned something. I saw something, and it talked to me. It told me everything I wanted to know.\n\nI can now synthesize fallen stars for you. The real thing. It was very simple. I don't want to talk about it.");
-                return chat;
-            }
-
             if (NPC.CountNPCS(NPCID.MoonLordHead) > 0)
             {
                 chat.Add("...");
@@ -102,7 +88,7 @@ namespace Thaumaturgy.NPCs
 
             if (NPC.downedAncientCultist && !NPC.downedMoonlord)
             {
-                chat.Add("It's coming closer. Reality is folding in on itself. Leave me alone. I need to protect my work.");
+                chat.Add("It's coming closer. Leave me alone. I need to protect my work.");
                 return chat;
             }
 
@@ -170,8 +156,8 @@ namespace Thaumaturgy.NPCs
                     chat.Add("The Hallow isn't actually magical in nature, insofar as thaumaturgy goes, at least. Pixies are, though.");
                     if (ModLoader.GetLoadedMods().Contains("CalamityMod"))
                     {
-                        chat.Add("Do you see the streaks in the sky? Those are the Astrum Deus. I think the aura created them.");
-                        chat.Add("Have you visited the crash site of that comet? My measurements say that it's by all regards a fallen star. By far the biggest I've ever seen, and I've seen a lot!");
+                        chat.Add("Do you see the streaks in the sky? Those are the Astrum Deus. They started showing up when that comet landed. I don't like the look of them.");
+                        chat.Add("Have you visited the crash site of that comet? My instruments say it's a fallen star, but something about it has twisted the land...");
                         chat.Add("I keep dreaming about the sun.");
                     }
                 }
@@ -220,12 +206,13 @@ namespace Thaumaturgy.NPCs
             if (!Main.hardMode)
             {
                 shop.item[nextSlot].SetDefaults(mod.ItemType("PaleStar"));
+                shop.item[nextSlot].shopCustomPrice = 1000;
             }
             else
             {
                 shop.item[nextSlot].SetDefaults(ItemID.FallenStar);
+                shop.item[nextSlot].shopCustomPrice = 2500;
             }
-            shop.item[nextSlot].shopCustomPrice = 1000;
             nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.Bottle);
             shop.item[nextSlot].shopCustomPrice = 75;

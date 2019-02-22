@@ -23,8 +23,8 @@ namespace Thaumaturgy.Items
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(this, 5);
-			recipe.SetResult(ItemID.ManaCrystal);
+			recipe.AddIngredient(this, 10);
+			recipe.SetResult(mod.ItemType("AuricCore"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));
 			recipe.AddRecipe();
 		}

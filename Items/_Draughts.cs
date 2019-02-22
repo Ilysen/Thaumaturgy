@@ -26,7 +26,7 @@ namespace Thaumaturgy.Items
             item.value = Item.sellPrice(1, 0, 0, 0);
             item.rare = 10;
             item.buffType = mod.BuffType("Determination");
-            item.buffTime = 108000;
+            item.buffTime = 2160000;
         }
 
         public override void AddRecipes()
@@ -69,7 +69,7 @@ namespace Thaumaturgy.Items
             item.value = Item.sellPrice(1, 0, 0, 0);
             item.rare = 10;
             item.buffType = mod.BuffType("Daring");
-            item.buffTime = 108000;
+            item.buffTime = 2160000;
         }
 
         public override void AddRecipes()
@@ -78,6 +78,7 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(mod.ItemType("ElixirSubmersion"));
             recipe.AddIngredient(mod.ItemType("ElixirDelving"));
             recipe.AddIngredient(mod.ItemType("ElixirTruesight"));
+            recipe.AddIngredient(mod.ItemType("ElixirAvarice"));
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricCore"), 5);
             recipe.AddTile(mod.TileType("Thaumatrestle"));

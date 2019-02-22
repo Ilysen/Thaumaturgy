@@ -38,6 +38,9 @@ namespace Thaumaturgy.Buffs
             //Mining
             player.pickSpeed -= 0.25f;
 
+            //Avarice
+            player.goldRing = true;
+
             //And prevent duplicates from vanilla buffs
             player.buffImmune[BuffID.Spelunker] = true;
             player.buffImmune[BuffID.Hunter] = true;
@@ -48,6 +51,7 @@ namespace Thaumaturgy.Buffs
             player.buffImmune[BuffID.Flipper] = true;
             player.buffImmune[BuffID.WaterWalking] = true;
             player.buffImmune[BuffID.Mining] = true;
+            player.buffImmune[mod.buffType("Avarice")] = true;
         }
     }
 }

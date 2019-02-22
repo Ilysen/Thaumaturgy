@@ -103,7 +103,7 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Glacial Highway Potion");
-            Tooltip.SetDefault("Ice forms beneath you as you walk");
+            Tooltip.SetDefault("Ice forms beneath you as you walk\nDisclaimer: May not play nice in multiplayer");
         }
 
         public override void SetDefaults()
