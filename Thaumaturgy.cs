@@ -32,6 +32,13 @@ namespace Thaumaturgy
             });
             RecipeGroup.RegisterGroup("Thaumaturgy:GoldOrPlatinum", group);
 
+            group = new RecipeGroup(() => "Iron or Lead Bar", new int[]
+            {
+                    ItemID.IronBar,
+                    ItemID.LeadBar
+            });
+            RecipeGroup.RegisterGroup("Thaumaturgy:IronBar", group);
+
             group = new RecipeGroup(() => "Gold or Platinum Bar", new int[]
             {
                     ItemID.GoldBar,
@@ -77,6 +84,13 @@ namespace Thaumaturgy
                     ItemID.CorruptSeeds
             });
             RecipeGroup.RegisterGroup("Thaumaturgy:EvilSeeds", group);
+
+            group = new RecipeGroup(() => "Any Evil Stone", new int[]
+            {
+                    ItemID.CrimstoneBlock,
+                    ItemID.EbonstoneBlock
+            });
+            RecipeGroup.RegisterGroup("Thaumaturgy:EvilStone", group);
         }
 
         public override void AddRecipes() //vanilla items are craftable using thaumaturgy!
@@ -236,6 +250,19 @@ namespace Thaumaturgy
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.AnkhCharm);
+            recipe.AddRecipe();
+
+            //Rod of Discord - 25 pixie dust, 1 unicorn horn, 15 souls of light, 3 crystal shards, 5 hallowed bars, and 10 auric cores
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.PixieDust, 25);
+            recipe.AddIngredient(ItemID.UnicornHorn, 10);
+            recipe.AddIngredient(ItemID.SoulofLight, 15);
+            recipe.AddIngredient(ItemID.CrystalShard, 3);
+            recipe.AddIngredient(ItemID.HallowedBar, 15);
+            recipe.AddIngredient(this.ItemType("AuricCore"), 10);
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.RodofDiscord);
             recipe.AddRecipe();
 
             /////////////
@@ -670,10 +697,9 @@ namespace Thaumaturgy
             recipe.AddRecipe();
 
             // Calamity potions - 1/shard //
-            if (ModLoader.GetMod("CalamityMod") != null)
+            var Calamity = ModLoader.GetMod("CalamityMod"); //we'll cache this for efficiency
+            if (Calamity != null)
             {
-                var Calamity = ModLoader.GetMod("CalamityMod"); //we'll cache this for efficiency
-
                 //Cadence
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(this.ItemType("SpellboundWater"));
@@ -1678,7 +1704,7 @@ namespace Thaumaturgy
             //Life Crystal x 2
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.LifeCrystal);
-            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddIngredient(this.ItemType("AuricCore"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("KaleidoscopicFocus"));
             recipe.SetResult(ItemID.LifeCrystal, 2);
@@ -1887,13 +1913,22 @@ namespace Thaumaturgy
             recipe.SetResult(ItemID.FragmentStardust, 2);
             recipe.AddRecipe();
 
-            //Luminite x 2
+            //Luminite x 5
             recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.LunarOre);
             recipe.AddIngredient(this.ItemType("AuricShard"));
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("CelestialFocus"));
-            recipe.SetResult(ItemID.LunarOre, 2);
+            recipe.SetResult(ItemID.LunarOre, 5);
+            recipe.AddRecipe();
+
+            //Life Fruit x 2
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.LifeFruit);
+            recipe.AddIngredient(this.ItemType("AuricCore"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("CelestialFocus"));
+            recipe.SetResult(ItemID.LifeFruit, 2);
             recipe.AddRecipe();
         }
     }
@@ -1904,8 +1939,8 @@ namespace Thaumaturgy
         {
             if (player.FindBuffIndex(mod.BuffType("WateryEmbers")) != -1)
             {
-                spawnRate = (int)(spawnRate / 10f);
-                maxSpawns = (int)(maxSpawns * 10f);
+                spawnRate = (int)(spawnRate / 25f);
+                maxSpawns = (int)(maxSpawns * 25f);
             }
         }
     }

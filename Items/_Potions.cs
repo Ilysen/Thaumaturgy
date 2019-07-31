@@ -199,7 +199,7 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Potion of Watery Embers");
-            Tooltip.SetDefault("Even diluted, embers of a water candle flare when ingested\nTremendously increases enemy spawn rate");
+            Tooltip.SetDefault("The embers of a water candle\nTremendously increases enemy spawn rate");
         }
 
         public override void SetDefaults()

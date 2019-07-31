@@ -59,7 +59,7 @@ namespace Thaumaturgy.NPCs
 
 		public override bool CanTownNPCSpawn(int numTownNPCs, int money)
 		{
-            return NPC.downedBoss1 || Main.expertMode;
+            return (NPC.downedSlimeKing || NPC.downedBoss1) || Main.hardMode || Main.expertMode;
         }
 
 		public override string TownNPCName()
@@ -82,13 +82,7 @@ namespace Thaumaturgy.NPCs
 
             if (NPC.CountNPCS(NPCID.MoonLordHead) > 0)
             {
-                chat.Add("...");
-                return chat;
-            }
-
-            if (NPC.downedAncientCultist && !NPC.downedMoonlord)
-            {
-                chat.Add("It's coming closer. Leave me alone. I need to protect my work.");
+                chat.Add("Don't you have something to worry about right now?");
                 return chat;
             }
 
@@ -107,7 +101,7 @@ namespace Thaumaturgy.NPCs
             int Cyborg = NPC.FindFirstNPC(NPCID.Cyborg);
             if (Cyborg >= 0 && Main.rand.Next(4) == 0)
             {
-                chat.Add("Between you and me, I think " + Main.npc[Cyborg].GivenName + " was someone's first golem. They escape all the time at the Academy, since people forget to bind them.");
+                chat.Add("Between you and me, I think " + Main.npc[Cyborg].GivenName + " is an escaped golem.");
             }
 
             int Angler = NPC.FindFirstNPC(NPCID.Angler);
@@ -115,59 +109,56 @@ namespace Thaumaturgy.NPCs
             {
                 chat.Add("Ever since " + Main.npc[Angler].GivenName + " learned that you can transmute fish, he's been pestering me to learn more. He's the most eager student I've ever seen outside the Academy, and he can't even read!");
             }
-
+            
             if (Main.dayTime)
             {
-                chat.Add("The aura's veil is very thin here. No wonder half of my instruments overload.");
-                chat.Add("Is it true that you folks make potions with plants? Isn't it easier to blend aura with a base liquid?");
-                chat.Add("Do you know how auric shards work? They're sort of like magical batteries. Good for a quick jolt of magic.");
-                chat.Add("I've been trying to see if I can make mana crystals from auric shards. No luck yet.");
-                chat.Add("What kind of name is \"thaumatrestle\" anyways? Who named that thing?");
+                chat.Add("Something about this place is... special. Different. What did you stumble onto?");
+                chat.Add("Is it true that you folks make potions with plants? Isn't it easier to to use aura?");
+                chat.Add("Oh, excuse me. Let me just finish this up this pale star, then I can talk.");
+                chat.Add("What kind of name is \"thaumatrestle\"? Anyway, what do you need?");
                 if (Main.raining)
                 {
                     chat.Add("Sorry about the rain. I lost track of some bottled lightning and something must've knocked it over.");
                 }
                 if (!Main.hardMode)
                 {
-                    chat.Add("I'm sorry, but pale stars just aren't as strong as the real thing. We've been trying for years.");
+                    chat.Add("Even here, synthesizing a fallen star just isn't possible. If you need auromancy supplies, I can sell you pale stars.");
                 }
                 else
                 {
-                    chat.Add("Pale stars? No, I don't have those anymore. Just take the normal ones. Please.");
-                    chat.Add("I can't stop having nightmares.", 0.1);
+                    chat.Add("Looking for pale stars? The guardian's defeat gave me new insight. These ones are much brighter!");
                 }
             }
             else
             {
-                chat.Add("Fallen stars are fundamentally different from the stars in the sky. They're a manifestation of the aura - sort of like magical refuse.");
-                chat.Add("Those specks you see are meteorites in orbit. They're attracted to dark; if you let out enough at once, one might come crashing down.");
+                chat.Add("Fallen stars aren't, you know - actual stars. They're a byproduct of the aura - magical refuse, basically. Each one still has a lot of power.");
+                chat.Add("Those specks you see are meteorites in orbit. Imbalance is like a magnet to them; let out enough dark at once, and it will attract them.");
                 chat.Add("Thaumatrestles include tools to break down fallen stars into shards without losing their energy. I can make you one, if you want.");
                 if (Main.hardMode)
                 {
                     if (!NPC.downedMoonlord)
                     {
-                        chat.Add("Something's changed since you let loose the spirits. Something's... watching? Be careful, friend.");
+                        chat.Add("Something's changed since you let loose the spirits. Something's... watching. Be careful, friend.");
                     }
                     else
                     {
-                        chat.Add("Whatever was lurking behind the aura is gone now. I imagine that was your work?");
+                        chat.Add("Whatever was lurking behind the moon is gone now. I imagine that was your work?");
                         chat.Add("I don't know what you did, but the fabric of reality here is different from anything I've ever seen...");
                     }
-                    chat.Add("The Hallow isn't actually magical in nature, insofar as thaumaturgy goes, at least. Pixies are, though.");
-                    if (ModLoader.GetLoadedMods().Contains("CalamityMod"))
+                    chat.Add("The Hallow isn't actually auric in nature, insofar as thaumaturgy goes, at least. Pixies are, though.");
+                    if (ModLoader.GetMod("CalamityMod") != null)
                     {
-                        chat.Add("Do you see the streaks in the sky? Those are the Astrum Deus. They started showing up when that comet landed. I don't like the look of them.");
-                        chat.Add("Have you visited the crash site of that comet? My instruments say it's a fallen star, but something about it has twisted the land...");
+                        chat.Add("Have you visited the crash site of that comet? My instruments say it's a fallen star, but...");
                         chat.Add("I keep dreaming about the sun.");
                     }
                 }
                 if (Main.player[Main.myPlayer].statManaMax >= 200)
                 {
-                    chat.Add("You're very in-tune with the aura. At least you understand half the things I say.");
+                    chat.Add("Yours is a body more conductive to mana then most. I wonder if that has to do with your ties to this world...");
                 }
                 else
                 {
-                    chat.Add("I hope I'm not making you bored with all my academic talk.");
+                    chat.Add("Are you sure you're cut out for this kind of work? You aren't very... in-tune.");
                 }
             }
 			return chat;
@@ -203,21 +194,20 @@ namespace Thaumaturgy.NPCs
             shop.item[nextSlot].SetDefaults(mod.ItemType("TransmutationFocus"));
             shop.item[nextSlot].shopCustomPrice = 5000;
             nextSlot++;
+            shop.item[nextSlot].SetDefaults(mod.ItemType("PaleStar"));
             if (!Main.hardMode)
             {
-                shop.item[nextSlot].SetDefaults(mod.ItemType("PaleStar"));
                 shop.item[nextSlot].shopCustomPrice = 1000;
             }
             else
             {
-                shop.item[nextSlot].SetDefaults(ItemID.FallenStar);
-                shop.item[nextSlot].shopCustomPrice = 2500;
+                shop.item[nextSlot].shopCustomPrice = 500;
             }
             nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.Bottle);
             shop.item[nextSlot].shopCustomPrice = 75;
             nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.BottledWater);
+            shop.item[nextSlot].SetDefaults(ItemID.BottledWater); // Convenience fee!
             shop.item[nextSlot].shopCustomPrice = 100;
             nextSlot++;
             if (NPC.downedBoss3)
@@ -230,7 +220,10 @@ namespace Thaumaturgy.NPCs
 
 		public override void NPCLoot()
 		{
-			Item.NewItem(npc.getRect(), mod.ItemType("GogglesofRevealing"));
+            if (Main.rand.Next(10) == 0)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("GogglesofRevealing"));
+            }
 		}
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)

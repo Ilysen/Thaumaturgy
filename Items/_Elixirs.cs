@@ -900,7 +900,7 @@ namespace Thaumaturgy.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Auric Elixir of Everburning Droplets");
+            DisplayName.SetDefault("Auric Elixir of Paradoxical Candleflame");
             Tooltip.SetDefault("Tremendously increases enemy spawns\nNot consumed upon use");
         }
 

@@ -13,7 +13,7 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Aurelian Harness");
-            Tooltip.SetDefault("A chest-strapped cylinder with two exhaust ports mounted on its sides\nChannels magic through meteorite, obsidian-sealed pipes to allow flight\nCruder than wings, and prone to malfunction");
+            Tooltip.SetDefault("A crude auric jetpack!\nForces aura through meteorite pipes, sealed with obsidian, to allow flight\nCruder than wings, may malfunction");
         }
 
         public override void SetDefaults()
@@ -49,27 +49,51 @@ namespace Thaumaturgy.Items
 
         public override bool WingUpdate(Player player, bool inUse)
         {
-            if(Main.rand.Next(500) == 0 && player.FindBuffIndex(BuffID.OnFire) == -1 && player.wingTime < player.wingTimeMax * 0.75 && player.wingTime != 0)
+            if(Main.rand.Next(20000) == 0 && player.FindBuffIndex(BuffID.OnFire) == -1 && player.wingTime < player.wingTimeMax * 0.75 && player.wingTime != 0)
             {
                 Main.PlaySound(SoundID.DD2_GoblinBomb);
                 Main.PlaySound(SoundID.Item44);
                 player.AddBuff(BuffID.VortexDebuff, 300, true);
                 player.AddBuff(BuffID.OnFire, 300, true);
             }
-            if(player.velocity.Y < 0)
+            if(player.controlJump && player.velocity.Y != 0)
             {
                 Vector2 position = player.Center;
                 position.X -= (player.direction == 1 ? 30f : 0f * player.direction);
-                Dust.NewDust(position, 30, 30, 15, 0f, 10f, 0, default(Color), 1.447368f);
-                if (soundtimer < 5)
+                Lighting.AddLight(position, 0.5f, 0.5f, 1f);
+                float horizontalSpread = Main.rand.Next(-3, 3);
+                if (player.wingTime > 0)
                 {
-                    soundtimer++;
+                    Dust.NewDust(position, 30, 30, 15, horizontalSpread, 10f, 0, default(Color), 1.447368f);
                 }
                 else
                 {
-                    Main.PlaySound(SoundID.Item9.WithVolume(0.5f), player.Center);
-                    soundtimer = 0;
+                    Dust.NewDust(position, 30, 30, 15, horizontalSpread, 5f, 0, default(Color), 1.447368f);
                 }
+                if (soundtimer <= 0)
+                {
+                    horizontalSpread = Main.rand.Next(-5, 5);
+                    Main.PlaySound(SoundID.Item9.WithVolume(0.25f), player.Center);
+                    soundtimer = 3;
+                }
+                else
+                {
+                    soundtimer--;
+                }
+                player.wingFrameCounter++;
+                if (player.wingFrameCounter > 4)
+                {
+                    player.wingFrame++;
+                    player.wingFrameCounter = 0;
+                    if (player.wingFrame >= 3)
+                    {
+                        player.wingFrame = 1;
+                    }
+                }
+            }
+            else
+            {
+                player.wingFrame = 0;
             }
             return true;
         }

@@ -8,8 +8,8 @@ namespace Thaumaturgy.Items
 	{
 		public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Massive Terran Bore");
-            Tooltip.SetDefault("An impressive technological feat that tunnels through earth\nUse to start it up, causing it to dig downwards until extreme heat destroys it\nThe bore shoves aside the earth into walls, and leaves a rope for safe descent\nDon't use if there's anything important below you\nMay require you to reload the world in multiplayer");
+            DisplayName.SetDefault("Terran Bore");
+            Tooltip.SetDefault("An impressive technomagical feat that tunnels through the earth\nUse to start it up, causing it to dig downwards until it reaches the Underworld\nThe bore recycles earth into a shielded, illuminated structure, and leaves a rope for safe descent\nSome extremely hard tiles may break the bore mid-tunnel\nDon't use if there's anything important below you\nMay require you to reload the world in multiplayer");
         }
 
 		public override void SetDefaults()
@@ -40,7 +40,7 @@ namespace Thaumaturgy.Items
                 {
                     if(Main.tile[i, v].type != null)
                     {
-                        if(Main.tile[i, v].type == TileID.Ash || Main.tile[i, v].type == TileID.ObsidianBrick || Main.tile[i, v].type == TileID.HellstoneBrick) //once we're at the Underworld, stop digging
+                        if(Main.tile[i, v].type == TileID.Ash || Main.tile[i, v].type == TileID.ObsidianBrick || Main.tile[i, v].type == TileID.HellstoneBrick || Main.tile[i, v].type == TileID.LihzahrdBrick) //once we're at the Underworld, stop digging
                         {
                             break;
                         }

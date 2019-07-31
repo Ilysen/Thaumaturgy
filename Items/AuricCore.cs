@@ -22,8 +22,14 @@ namespace Thaumaturgy.Items
 		}
 
 		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("PaleStar"), 10);
+            recipe.SetResult(this);
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.ManaCrystal, 2);
 			recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));

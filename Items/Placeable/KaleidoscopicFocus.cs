@@ -17,7 +17,6 @@ namespace Thaumaturgy.Items.Placeable
             recipe.AddIngredient(mod.ItemType("ReplicationFocus"));
             recipe.AddIngredient(ItemID.DirtBlock);
             recipe.AddIngredient(ItemID.StoneBlock);
-            recipe.AddIngredient(ItemID.ClayBlock);
             recipe.AddIngredient(ItemID.SandBlock);
             recipe.AddIngredient(ItemID.SnowBlock);
             recipe.AddIngredient(ItemID.MudBlock);
@@ -26,6 +25,8 @@ namespace Thaumaturgy.Items.Placeable
             recipe.AddIngredient(ItemID.Meteorite);
             recipe.AddIngredient(ItemID.Hellstone);
             recipe.AddIngredient(ItemID.Cloud);
+            recipe.AddIngredient(ItemID.PearlstoneBlock);
+            recipe.AddRecipeGroup("Thaumaturgy:EvilStone");
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.SetResult(this);

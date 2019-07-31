@@ -19,14 +19,5 @@ namespace Thaumaturgy.Items
 			item.value = 500;
 			item.rare = 1;
 		}
-
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(this, 10);
-			recipe.SetResult(mod.ItemType("AuricCore"));
-            recipe.AddTile(mod.TileType("Thaumatrestle"));
-			recipe.AddRecipe();
-		}
 	}
 }

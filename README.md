@@ -13,10 +13,46 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Credit Where Due
 
-* **Xhuis** - Code, sprites, writing.
+* **Xhuis** - Code, sprites.
+* **Ilysen** - Code, sprites, and writing after 1.0.15.0.
 * **Re-Logic** - Terraria, and the sprites I used as reference/basis for Thaumaturgy's!
 
 # Changelog
+
+### Jul. 30, 2019
+
+#### 1.0.16.2
+
+* Renamed Thaum Noms to Thaumic Pie.
+* Thaumic Pie now automatically applies Well Fed, and is not consumed.
+* Made Thaumic Pie a bit harder to craft, owing to being infinite.
+
+#### 1.0.16.1
+
+* Added increased reach to the conjurer's lamp, and reduced its rarity to blue. (It looks better with its colors. Don't judge.)
+* Renamed auric torches to glimmer lights.
+* Added a very small mana cost to the conjurer's lamp.
+* Added phoenix down.
+
+#### 1.0.16.0
+
+* Massively reduced the chance of the Aurelian Harness malfunctioning, from 1 in 500 per frame to 1 in 20000.
+* The Thaumaturge now only drops his goggles 10% of the time.
+* Renamed the Elixir of Everburning Depths to the Elixir of Paradoxical Candleflame.
+* Resprited the Watery Embers buff icon.
+* Resprited the Slate Tablet.
+* Buffed the Watery Embers potion a bit.
+* Rewrote the Thaumaturge's lines.
+* Removed fallen stars from the Thaumaturge's inventory - it broke balance both in vanilla and across mods. To compensate, pale stars are now much cheaper in hardmode.
+* Stopped the Terran Bore from breaking into the temple.
+* Made the Kaleidoscopic Focus require Pearlstone to prevent super fast rushing pre-Hardmode, breaking any semblance of balance.
+* Replicating life crystals now requires an auric core.
+* Added a recipe for the Rod of Discord.
+* Added a replication recipe for life fruit with the Celestial Focus.
+* Added the conjurer's lamp.
+* Added a new mod browser icon.
+* Rewrote the code for, and resprited, the aurelian harness.
+* Various code cleanups.
 
 ### Feb. 21, 2019
 

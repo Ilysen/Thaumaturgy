@@ -8,36 +8,28 @@ namespace Thaumaturgy.Items
 	{
 		public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Thaum Noms");
-            Tooltip.SetDefault("It tastes like blueberry!\nMinor improvements to all stats");
+            DisplayName.SetDefault("Thaumic Pie");
+            Tooltip.SetDefault("Minor improvements to all stats\nSelf-applies from your inventory\n60 minute duration");
         }
 
 		public override void SetDefaults()
         {
-            item.UseSound = SoundID.Item2;
-            item.useStyle = 2;
-            item.useTurn = true;
-            item.useAnimation = 17;
-            item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 38;
             item.height = 24;
-            item.consumable = true;
             item.value = Item.sellPrice(0, 0, 5, 0);
             item.rare = 3;
-            item.buffType = BuffID.WellFed;
-            item.buffTime = 216000;
         }
 
         public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Pumpkin, 5);
-            recipe.AddIngredient(mod.ItemType("AuricShard"));
+            recipe.AddIngredient(ItemID.PumpkinPie, 5);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddTile(TileID.CookingPots);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
-	}
+    }
 }
