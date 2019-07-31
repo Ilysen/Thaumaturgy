@@ -27,8 +27,9 @@ namespace Thaumaturgy.Tiles
 
         public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
         {
-            Item.NewItem(i * 16, j * 16, 16, 16, mod.ItemType("TransmutationFocus"));
             Main.PlaySound(SoundID.Shatter, i * 16, j * 16);
+			if(!effectOnly && !fail && !noItem)
+				Item.NewItem(i * 16, j * 16, 16, 16, mod.ItemType("TransmutationFocus"));
         }
     }
 }

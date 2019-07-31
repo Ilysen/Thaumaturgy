@@ -19,6 +19,12 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jul. 31, 2019
+
+#### 1.0.16.3
+
+* Fixed a long-standing bug with foci duplicating when they're hit.
+
 ### Jul. 30, 2019
 
 #### 1.0.16.2
