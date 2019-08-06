@@ -21,10 +21,12 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Aug. 6, 2019
 
+#### 1.0.17.2
+
+* Yes, Ava, you did in fact include the Auric Gunshell changelog. This patch removes that duplicate changelog. >>
+
 #### 1.0.17.1
 
-* Added the Auric Gunshell, an infinite ammo source with no knockback but good piercing. Craft it with auric cores and an Endless Musket Pouch.
-* (I didn't actually add it this patch, but I forgot to include it in the changelog for the last one, so there you go.)
 * Updated the homepage to the new forum thread. Yes, it's really me!
 
 #### 1.0.17.0
