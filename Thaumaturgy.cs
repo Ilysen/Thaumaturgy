@@ -265,6 +265,24 @@ namespace Thaumaturgy
             recipe.SetResult(ItemID.RodofDiscord);
             recipe.AddRecipe();
 
+            //Endless Quiver - Same materials as vanilla, plus an auric core
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.WoodenArrow, 3996);
+            recipe.AddIngredient(this.ItemType("AuricCore"), 1);
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.EndlessQuiver);
+            recipe.AddRecipe();
+
+            //Endless Musket Pouch - See above
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.MusketBall, 3996);
+            recipe.AddIngredient(this.ItemType("AuricCore"), 1);
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.EndlessMusketPouch);
+            recipe.AddRecipe();
+
             /////////////
             // POTIONS //
             /////////////

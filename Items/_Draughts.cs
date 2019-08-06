@@ -32,6 +32,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("CrystalPhial"));
             recipe.AddIngredient(mod.ItemType("ElixirFortitude"));
             recipe.AddIngredient(mod.ItemType("ElixirVigor"));
             recipe.AddIngredient(mod.ItemType("ElixirAlacrity"));
@@ -75,11 +76,50 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("CrystalPhial"));
             recipe.AddIngredient(mod.ItemType("ElixirSubmersion"));
             recipe.AddIngredient(mod.ItemType("ElixirDelving"));
             recipe.AddIngredient(mod.ItemType("ElixirTruesight"));
             recipe.AddIngredient(mod.ItemType("ElixirAvarice"));
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
+            recipe.AddIngredient(mod.ItemType("AuricCore"), 5);
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+
+    public class DraughtDaredevilry : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Draught of Daredevilry");
+            Tooltip.SetDefault("Grants all vanilla potion benefits\nNot consumed upon use");
+        }
+
+        public override void SetDefaults()
+        {
+            item.UseSound = SoundID.Item3;
+            item.useStyle = 2;
+            item.useTurn = true;
+            item.useAnimation = 17;
+            item.useTime = 17;
+            item.maxStack = 1;
+            item.width = 20;
+            item.height = 20;
+            item.value = Item.sellPrice(2, 50, 0, 0);
+            item.rare = 11;
+            item.buffType = mod.BuffType("Daredevilry");
+            item.buffTime = 216000;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("CrystalPhial"));
+            recipe.AddIngredient(mod.ItemType("DraughtDaring"));
+            recipe.AddIngredient(mod.ItemType("DraughtDetermination"));
             recipe.AddIngredient(mod.ItemType("AuricCore"), 5);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

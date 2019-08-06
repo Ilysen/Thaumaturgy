@@ -47,7 +47,7 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(ItemID.AmmoReservationPotion);
             recipe.AddIngredient(ItemID.BlackLens);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
-            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.SetResult(this);
@@ -96,7 +96,7 @@ namespace Thaumaturgy.Items
                 recipe.AddIngredient(ItemID.ManaRegenerationPotion);
                 recipe.AddIngredient(ItemID.Meteorite);
                 recipe.AddIngredient(mod.ItemType("SpellboundWater"));
-                recipe.AddIngredient(mod.ItemType("AuricCore"));
+                recipe.AddIngredient(mod.ItemType("AuricShard"));
                 recipe.AddTile(mod.TileType("Thaumatrestle"));
                 recipe.AddTile(mod.TileType("SynthesisFocus"));
                 recipe.SetResult(this);
@@ -145,7 +145,7 @@ namespace Thaumaturgy.Items
                 recipe.AddIngredient(ItemID.SummoningPotion);
                 recipe.AddIngredient(ItemID.Hellstone);
                 recipe.AddIngredient(mod.ItemType("SpellboundWater"));
-                recipe.AddIngredient(mod.ItemType("AuricCore"));
+                recipe.AddIngredient(mod.ItemType("AuricShard"));
                 recipe.AddTile(mod.TileType("Thaumatrestle"));
                 recipe.AddTile(mod.TileType("SynthesisFocus"));
                 recipe.SetResult(this);
@@ -195,7 +195,7 @@ namespace Thaumaturgy.Items
                 recipe.AddIngredient(ItemID.TitanPotion);
                 recipe.AddIngredient(ItemID.Obsidian);
                 recipe.AddIngredient(mod.ItemType("SpellboundWater"));
-                recipe.AddIngredient(mod.ItemType("AuricCore"));
+                recipe.AddIngredient(mod.ItemType("AuricShard"));
                 recipe.AddTile(mod.TileType("Thaumatrestle"));
                 recipe.AddTile(mod.TileType("SynthesisFocus"));
                 recipe.SetResult(this);

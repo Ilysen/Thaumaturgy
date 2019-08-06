@@ -1,4 +1,4 @@
 author = Ilysen
-version = 1.0.16.3
+version = 1.0.17.0
 displayName = Thaumaturgy
 homepage = https://github.com/Ilysen/Thaumaturgy

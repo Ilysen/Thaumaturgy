@@ -19,7 +19,20 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
-### Jul. 31, 2019
+### Aug. 6, 2019
+
+#### 1.0.17.0
+
+* Added recipes for the endless quiver and endless musket pouch so that they're obtainable pre-Hardmode. They don't break balance!
+* Added the Bind-Shackle accessory, which increases mining speed.
+* Added the Auric Gunshell ammo item, which functions in the vein of the musket pouch, but higher damage and piercing at the cost of no knockback.
+* Added the Pathfinder's Lamp accessory, which provides a small amount of light when worn.
+* **Note:** Both of the following changes are made in an effort to balance out the power of elixirs and draughts. Both are currently almost entirely money-gated. In order to preevent it from just being a mindless material grind, the actual material costs are fairly low for each of the items; it's mostly a test of "can you get these materials during this progression point."
+* Added the Treated Flask material (made with Meteorite, Hellstone, and Obsidian) and added it to the recipes for flasks.
+* Added the Crystal Phial material (made with Crystal Shards and Souls of Light) and added it to the recipes for draughts.
+* Added the Draught of Daredevilry, which combines both draughts into one!
+* Updated sprites for all elixirs and draughts to represent the new bottles.
+* Reduced the cost of all flasks by replacing their auric core cost with auric shards.
 
 #### 1.0.16.3
 

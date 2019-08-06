@@ -41,6 +41,7 @@ namespace Thaumaturgy.Items
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.HealingPotion, 20);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
@@ -84,6 +85,7 @@ namespace Thaumaturgy.Items
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.GreaterHealingPotion, 20);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 6);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
@@ -127,6 +129,7 @@ namespace Thaumaturgy.Items
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.SuperHealingPotion, 20);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 9);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
@@ -176,6 +179,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("CrystalPhial"));
             recipe.AddIngredient(mod.ItemType("ElixirHealing"));
             recipe.AddIngredient(mod.ItemType("ElixirHealingGreater"));
             recipe.AddIngredient(mod.ItemType("ElixirHealingSuper"));
@@ -220,6 +224,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.IronskinPotion, 5);
             recipe.AddIngredient(ItemID.EndurancePotion, 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
@@ -265,6 +270,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.RegenerationPotion, 5);
             recipe.AddIngredient(ItemID.LifeforcePotion, 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
@@ -310,6 +316,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.SwiftnessPotion, 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
@@ -348,6 +355,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.GillsPotion, 5);
             recipe.AddIngredient(ItemID.FlipperPotion, 5);
             recipe.AddIngredient(ItemID.WaterWalkingPotion, 5);
@@ -395,6 +403,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.MiningPotion, 5);
             recipe.AddIngredient(ItemID.NightOwlPotion, 5);
             recipe.AddIngredient(ItemID.ObsidianSkinPotion, 5);
@@ -442,6 +451,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.SpelunkerPotion, 5);
             recipe.AddIngredient(ItemID.HunterPotion, 5);
             recipe.AddIngredient(ItemID.TrapsightPotion, 5);
@@ -457,6 +467,7 @@ namespace Thaumaturgy.Items
             {
                 var Calamity = ModLoader.GetMod("CalamityMod");
                 recipe = new ModRecipe(mod);
+                recipe.AddIngredient(mod.ItemType("TreatedFlask"));
                 recipe.AddIngredient(Calamity.ItemType("PotionofOmniscience"), 5);
                 recipe.AddIngredient(mod.ItemType("SpellboundWater"));
                 recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
@@ -502,6 +513,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.FishingPotion, 5);
             recipe.AddIngredient(ItemID.CratePotion, 5);
             recipe.AddIngredient(ItemID.SonarPotion, 5);
@@ -549,6 +561,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.WrathPotion, 5);
             recipe.AddIngredient(ItemID.RagePotion, 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
@@ -594,6 +607,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.ArcheryPotion, 5);
             recipe.AddIngredient(ItemID.AmmoReservationPotion, 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
@@ -639,6 +653,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.MagicPowerPotion, 5);
             recipe.AddIngredient(ItemID.ManaRegenerationPotion, 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
@@ -684,6 +699,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.SummoningPotion, 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
@@ -722,6 +738,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(ItemID.GravitationPotion, 5);
             recipe.AddIngredient(ItemID.FeatherfallPotion, 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
@@ -771,6 +788,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(mod.ItemType("PotionAvarice"), 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
@@ -809,6 +827,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(mod.ItemType("PotionEvasion"), 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
@@ -847,6 +866,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(mod.ItemType("PotionGlacialHighway"), 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
@@ -885,6 +905,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(mod.ItemType("PotionVoid"), 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
@@ -923,6 +944,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
             recipe.AddIngredient(mod.ItemType("PotionWateryEmbers"), 5);
             recipe.AddIngredient(mod.ItemType("SpellboundWater"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
