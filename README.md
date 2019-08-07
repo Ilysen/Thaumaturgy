@@ -21,6 +21,10 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Aug. 7, 2019
 
+#### 1.0.18.3
+
+* Added the Potion of Soothing Embers and its elixir counterpart, the Elixir of Utter Calm, which hugely reduce enemy spawns.
+
 #### 1.0.18.2
 
 * The Kaleidoscopic Focus now functions as a Replication Focus. The Celestial Focus now also functions as both a Kaleidoscopic Focus and Replication Focus. In short: upgraded versions keep their recipes. You don't need one of each now.

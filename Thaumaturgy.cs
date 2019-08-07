@@ -1968,6 +1968,10 @@ namespace Thaumaturgy
                 spawnRate = (int)(spawnRate / 25f);
                 maxSpawns = (int)(maxSpawns * 25f);
             }
+            else if(player.FindBuffIndex(mod.BuffType("SoothingEmbers")) != -1)
+            {
+                spawnRate = (int)(spawnRate * 25f);
+            }
         }
     }
 }

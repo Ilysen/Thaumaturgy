@@ -955,4 +955,43 @@ namespace Thaumaturgy.Items
             recipe.AddRecipe();
         }
     }
+
+    public class ElixirUtterCalm : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Auric Elixir of Utter Calm");
+            Tooltip.SetDefault("Tremendously reduces enemy spawns\nNot consumed upon use");
+        }
+
+        public override void SetDefaults()
+        {
+            item.UseSound = SoundID.Item3;
+            item.useStyle = 2;
+            item.useTurn = true;
+            item.useAnimation = 17;
+            item.useTime = 17;
+            item.maxStack = 1;
+            item.width = 20;
+            item.height = 20;
+            item.value = Item.sellPrice(0, 1, 0, 0);
+            item.rare = 3;
+            item.buffType = mod.BuffType("SoothingEmbers");
+            item.buffTime = 18000;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("TreatedFlask"));
+            recipe.AddIngredient(mod.ItemType("PotionSoothingEmbers"), 5);
+            recipe.AddIngredient(mod.ItemType("SpellboundWater"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
 }
