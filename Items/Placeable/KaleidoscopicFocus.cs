@@ -8,7 +8,7 @@ namespace Thaumaturgy.Items.Placeable
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Kaleidoscopic Focus");
-            Tooltip.SetDefault("A set of rainbow auric crystals\nContains modicums of aura from across the world\nUsed to replicate pre-Hardmode materials");
+            Tooltip.SetDefault("A set of rainbow auric crystals\nContains modicums of aura from across the world\nUsed to replicate pre-Hardmode materials\nFunctions as a replication focus");
         }
 
         public override void AddRecipes()
@@ -45,7 +45,7 @@ namespace Thaumaturgy.Items.Placeable
             item.useStyle = 1;
             item.consumable = true;
             item.value = 1000;
-            item.rare = 1;
+            item.rare = 4;
             item.createTile = mod.TileType("KaleidoscopicFocus");
         }
     }

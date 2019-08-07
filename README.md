@@ -19,7 +19,20 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
-### Aug. 6, 2019
+### Aug. 7, 2019
+
+#### 1.0.18.0
+
+* The Kaleidoscopic Focus now functions as a Replication Focus. The Celestial Focus now also functions as both a Kaleidoscopic Focus and Replication Focus. In short: upgraded versions keep their recipes. You don't need one of each now.
+* The Celestial Focus now requires one of reach lunar fragment.
+* Added the Universal Focus, which functions as every focus. Craft it with all three foci and several auric cores.d
+* The Thaumaturge now sells a new ingredient, Alchemical Brass, after the defeat of the Eater of Worlds/Brain of Cthulhu. Use it to make new stuff.
+* Added the Aural Tether, which lets you mark a point, then later recall to it. Synthesise it with a magic mirror, alchemical brass, and auric cores.
+* The Terran Bore now requires alchemical brass instead of meteorite, and has been recolored.
+* The Auric Gunshell now requires alchemical brass, and has a new sprite.
+* Added the Aura Aegis, which is synthesized by combining the Shield of Cthulhu and the Ankh Shield and provides both of their effects, as well as granting immunity to more debuffs.
+* The Aurelian Harness can be stabilized using souls of flight, upgrading them to roughly on par with the Leaf Wings.
+* Gave Ethereal Bullets (from the Auric Gunshell) fancy particles.
 
 #### 1.0.17.2
 

@@ -22,7 +22,7 @@ namespace Thaumaturgy.Tiles
             name.SetDefault("Kaleidoscopic Focus");
             AddMapEntry(new Color(200, 200, 200), name);
             disableSmartCursor = true;
-            adjTiles = new int[] {};
+            adjTiles = new int[] { mod.TileType("ReplicationFocus") };
         }
 
         public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)

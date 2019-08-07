@@ -25,11 +25,16 @@ namespace Thaumaturgy.Projectiles
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             Main.PlaySound(SoundID.Item10, projectile.position);
+            for (var i = 0; i < 3; i++)
+            {
+                Dust.NewDust(projectile.Center, 30, 30, 15, 0, 0, 0, default(Color), 1.5f);
+            }
             return true;
         }
 
         public override void AI()
         {
+            Dust.NewDust(projectile.Center, 5, 5, 15, 0, 0, 0, default(Color), 0.5f);
             Lighting.AddLight(projectile.Center, 1f, 0.75f, 1f);
             base.AI();
         }

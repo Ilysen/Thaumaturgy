@@ -31,6 +31,7 @@ namespace Thaumaturgy.Items.Weapons
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.EndlessMusketPouch);
+            recipe.AddIngredient(mod.ItemType("AlchemicalBrass"));
             recipe.AddIngredient(mod.ItemType("AuricCore"), 3);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

@@ -92,7 +92,7 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(ItemID.IridescentBrick, 300);
             recipe.AddIngredient(ItemID.SilkRopeCoil, 100);
             recipe.AddIngredient(ItemID.DiamondGemsparkBlock, 30);
-            recipe.AddIngredient(ItemID.MeteoriteBar, 30);
+            recipe.AddIngredient(mod.ItemType("AlchemicalBrass"), 30);
             recipe.AddIngredient(mod.ItemType("AuricCore"), 10);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

@@ -8,7 +8,7 @@ namespace Thaumaturgy.Items.Placeable
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Replication Focus");
-            Tooltip.SetDefault("A set of green auric crystals\nUsed to duplicate mundane items");
+            Tooltip.SetDefault("A set of green auric crystals\nUsed to replicate mundane items");
         }
 
         public override void SetDefaults()

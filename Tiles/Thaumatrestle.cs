@@ -23,7 +23,8 @@ namespace Thaumaturgy.Tiles
 			name.SetDefault("Thaumatrestle");
 			AddMapEntry(new Color(200, 200, 200), name);
 			disableSmartCursor = true;
-			adjTiles = new int[]{ TileID.WorkBenches };
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
+            adjTiles = new int[]{ TileID.WorkBenches };
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)

@@ -91,6 +91,14 @@ namespace Thaumaturgy
                     ItemID.EbonstoneBlock
             });
             RecipeGroup.RegisterGroup("Thaumaturgy:EvilStone", group);
+
+            group = new RecipeGroup(() => "Any Replication Focus", new int[]
+            {
+                    TileType("ReplicationFocus"),
+                    TileType("KaleidoscopicFocus"),
+                    TileType("CelestialFocus")
+            });
+            RecipeGroup.RegisterGroup("Thaumaturgy:ReplicationFocus", group);
         }
 
         public override void AddRecipes() //vanilla items are craftable using thaumaturgy!

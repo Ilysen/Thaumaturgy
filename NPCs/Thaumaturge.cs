@@ -10,8 +10,6 @@ namespace Thaumaturgy.NPCs
 	[AutoloadHead]
 	public class Thaumaturge : ModNPC
 	{
-        private bool sellsFallenStars = false;
-        private bool sellsSpellboundWater = false;
 		public override string Texture
 		{
 			get
@@ -53,8 +51,6 @@ namespace Thaumaturgy.NPCs
 			npc.DeathSound = SoundID.NPCDeath1;
 			npc.knockBackResist = 0.5f;
 			animationType = NPCID.Clothier;
-            sellsFallenStars = Main.hardMode;
-            sellsSpellboundWater = NPC.downedBoss3;
 		}
 
 		public override bool CanTownNPCSpawn(int numTownNPCs, int money)
@@ -210,6 +206,12 @@ namespace Thaumaturgy.NPCs
             shop.item[nextSlot].SetDefaults(ItemID.BottledWater); // Convenience fee!
             shop.item[nextSlot].shopCustomPrice = 100;
             nextSlot++;
+            if (NPC.downedBoss2)
+            {
+                shop.item[nextSlot].SetDefaults(mod.ItemType("AlchemicalBrass"));
+                shop.item[nextSlot].shopCustomPrice = 1000;
+                nextSlot++;
+            }
             if (NPC.downedBoss3)
             {
                 shop.item[nextSlot].SetDefaults(mod.ItemType("SpellboundWater"));

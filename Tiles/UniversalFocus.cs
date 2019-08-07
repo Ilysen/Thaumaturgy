@@ -6,7 +6,7 @@ using Terraria.ObjectData;
 
 namespace Thaumaturgy.Tiles
 {
-    public class CelestialFocus : ModTile
+    public class UniversalFocus : ModTile
     {
         public override void SetDefaults()
         {
@@ -19,17 +19,18 @@ namespace Thaumaturgy.Tiles
             TileObjectData.newTile.CoordinateHeights = new int[] { 16 };
             TileObjectData.addTile(Type);
             ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Celestial Focus");
+            name.SetDefault("Universal Focus");
             AddMapEntry(new Color(200, 200, 200), name);
             disableSmartCursor = true;
-            adjTiles = new int[] { mod.TileType("ReplicationFocus"), mod.TileType("KaleidoscopicFocus") };
+            adjTiles = new int[] { mod.TileType("ReplicationFocus"), mod.TileType("KaleidoscopicFocus"),
+                mod.TileType("CelestialFocus"), mod.TileType("SynthesisFocus"), mod.TileType("TransmutationFocus") };
         }
 
         public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
         {
             Main.PlaySound(SoundID.Shatter, i * 16, j * 16);
 			if(!effectOnly && !fail && !noItem)
-				Item.NewItem(i * 16, j * 16, 16, 16, mod.ItemType("CelestialFocus"));
+				Item.NewItem(i * 16, j * 16, 16, 16, mod.ItemType("UniversalFocus"));
         }
     }
 }

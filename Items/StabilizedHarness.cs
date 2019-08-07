@@ -6,56 +6,49 @@ using Microsoft.Xna.Framework;
 namespace Thaumaturgy.Items
 {
     [AutoloadEquip(EquipType.Wings)]
-    public class AurelianHarness : ModItem
+    public class StabilizedHarness : ModItem
     {
         int soundtimer = 0;
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Aurelian Harness");
-            Tooltip.SetDefault("A crude auric jetpack!\nForces aura through meteorite pipes, sealed with obsidian, to allow flight\nCruder than wings, may malfunction");
+            DisplayName.SetDefault("Stabilized Harness");
+            Tooltip.SetDefault("Allows flight and slow fall\nStabilised using souls of flight - won't malfunction");
         }
 
         public override void SetDefaults()
         {
             item.width = 22;
             item.height = 20;
-            item.value = Item.sellPrice(0, 10, 0, 0);
-            item.rare = 3;
+            item.value = Item.sellPrice(0, 50, 0, 0);
+            item.rare = 6;
             item.accessory = true;
             item.defense = 1;
         }
         
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.wingTimeMax = 100;
+            player.wingTimeMax = 150;
         }
 
         public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising,
             ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
         {
             ascentWhenFalling = 0.85f;
-            ascentWhenRising = 0.1f;
+            ascentWhenRising = 0.15f;
             maxCanAscendMultiplier = 1f;
-            maxAscentMultiplier = 1f;
+            maxAscentMultiplier = 2f;
             constantAscend = 0.135f;
         }
 
         public override void HorizontalWingSpeeds(Player player, ref float speed, ref float acceleration)
         {
             speed = 8f;
-            acceleration *= 1f;
+            acceleration *= 1.5f;
         }
 
         public override bool WingUpdate(Player player, bool inUse)
         {
-            if(Main.rand.Next(20000) == 0 && player.FindBuffIndex(BuffID.OnFire) == -1 && player.wingTime < player.wingTimeMax * 0.75 && player.wingTime != 0)
-            {
-                Main.PlaySound(SoundID.DD2_GoblinBomb);
-                Main.PlaySound(SoundID.Item44);
-                player.AddBuff(BuffID.VortexDebuff, 300, true);
-                player.AddBuff(BuffID.OnFire, 300, true);
-            }
             if(player.controlJump && player.velocity.Y != 0)
             {
                 Vector2 position = player.Center;
@@ -101,13 +94,8 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddRecipeGroup("Wood", 25);
-            recipe.AddIngredient(mod.ItemType("AlchemicalBrass"), 10);
-            recipe.AddIngredient(ItemID.Wire, 30);
-            recipe.AddIngredient(ItemID.MeteoriteBar, 3);
-            recipe.AddIngredient(ItemID.Obsidian, 5);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 5);
-            recipe.AddIngredient(mod.ItemType("AuricShard"), 25);
+            recipe.AddIngredient(mod.ItemType("AurelianHarness"));
+            recipe.AddIngredient(ItemID.SoulofFlight, 20);
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

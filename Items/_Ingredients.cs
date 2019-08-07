@@ -70,6 +70,24 @@ namespace Thaumaturgy.Items
         }
     }
 
+    public class AlchemicalBrass : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Alchemical Brass");
+            Tooltip.SetDefault("An alloy conductive to mana\nInvented by the forefather of thaumaturgy\nUsed in synthesis");
+        }
+
+        public override void SetDefaults()
+        {
+            item.width = 30;
+            item.height = 24;
+            item.maxStack = 999;
+            item.value = Item.sellPrice(0, 0, 5, 0);
+            item.rare = 1;
+        }
+    }
+
     public class TreatedFlask : ModItem
     {
         public override void SetStaticDefaults()
