@@ -21,7 +21,7 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Aug. 7, 2019
 
-#### 1.0.18.0
+#### 1.0.18.1
 
 * The Kaleidoscopic Focus now functions as a Replication Focus. The Celestial Focus now also functions as both a Kaleidoscopic Focus and Replication Focus. In short: upgraded versions keep their recipes. You don't need one of each now.
 * The Celestial Focus now requires one of reach lunar fragment.
@@ -33,6 +33,9 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 * Added the Aura Aegis, which is synthesized by combining the Shield of Cthulhu and the Ankh Shield and provides both of their effects, as well as granting immunity to more debuffs.
 * The Aurelian Harness can be stabilized using souls of flight, upgrading them to roughly on par with the Leaf Wings.
 * Gave Ethereal Bullets (from the Auric Gunshell) fancy particles.
+* Added the Falling Flame consumable item, which hurls you far into the distance. Craft several with a few fallen stars, a torch, and an auric core.
+* The taumatrestle now functions as a table in NPC housing.
+* Minor grammar changes.
 
 #### 1.0.17.2
 
