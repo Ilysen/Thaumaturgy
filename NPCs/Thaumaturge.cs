@@ -103,7 +103,7 @@ namespace Thaumaturgy.NPCs
             int Angler = NPC.FindFirstNPC(NPCID.Angler);
             if (Angler >= 0 && Main.rand.Next(4) == 0)
             {
-                chat.Add("Ever since " + Main.npc[Angler].GivenName + " learned that you can transmute fish, he's been pestering me to learn more. He's the most eager student I've ever seen outside the Academy, and he can't even read!");
+                chat.Add("Ever since " + Main.npc[Angler].GivenName + " learned that you can transmute fish, he's been pestering me to learn more. He's the most eager student I've ever had, and he can't even read!");
             }
             
             if (Main.dayTime)
@@ -162,7 +162,7 @@ namespace Thaumaturgy.NPCs
 
 		public override void SetChatButtons(ref string button, ref string button2)
 		{
-            if (!(NPC.downedAncientCultist && !NPC.downedMoonlord) && NPC.CountNPCS(NPCID.MoonLordHead) == 0)
+            if (NPC.CountNPCS(NPCID.MoonLordHead) == 0)
             {
                 button = Language.GetTextValue("LegacyInterface.28");
             }
@@ -208,7 +208,7 @@ namespace Thaumaturgy.NPCs
             nextSlot++;
             if (NPC.downedBoss2)
             {
-                shop.item[nextSlot].SetDefaults(mod.ItemType("AlchemicalBrass"));
+                shop.item[nextSlot].SetDefaults(mod.ItemType("Starbrass"));
                 shop.item[nextSlot].shopCustomPrice = 1000;
                 nextSlot++;
             }

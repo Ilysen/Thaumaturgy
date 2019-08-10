@@ -70,12 +70,12 @@ namespace Thaumaturgy.Items
         }
     }
 
-    public class AlchemicalBrass : ModItem
+    public class Starbrass : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Alchemical Brass");
-            Tooltip.SetDefault("An alloy conductive to mana\nInvented by the forefather of thaumaturgy\nUsed in synthesis");
+            DisplayName.SetDefault("Starbrass");
+            Tooltip.SetDefault("A strong, mana-conductive alloy\nPioneered by a thaumaturge from an ancient land");
         }
 
         public override void SetDefaults()

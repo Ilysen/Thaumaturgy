@@ -102,7 +102,7 @@ namespace Thaumaturgy.Items
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddRecipeGroup("Wood", 25);
-            recipe.AddIngredient(mod.ItemType("AlchemicalBrass"), 10);
+            recipe.AddIngredient(mod.ItemType("Starbrass"), 10);
             recipe.AddIngredient(ItemID.Wire, 30);
             recipe.AddIngredient(ItemID.MeteoriteBar, 3);
             recipe.AddIngredient(ItemID.Obsidian, 5);

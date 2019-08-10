@@ -15,9 +15,20 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 * **Xhuis** - Code, sprites.
 * **Ilysen** - Code, sprites, and writing after 1.0.15.0.
+* **Flaqzar** - Sprites for the Starbrass armor set.
 * **Re-Logic** - Terraria, and the sprites I used as reference/basis for Thaumaturgy's!
 
 # Changelog
+
+### Aug. 10, 2019
+
+#### 1.0.18.4
+
+* Renamed alchemical brass to starbrass ~~because it sounds cooler~~ to differentiate it from Minecraft's Thaumcraft.
+* Added the Starbrass armor set, an early pre-Hardmode magic armor set made of starbrass and auric ingredients.
+* Added the Auromechanical armor set, an upgraded version of Starbrass armor with stronger effects.
+* Fixed a bug where the Thaumaturge wouldn't sell to you if you'd beaten the Lunatic Cultist but not the Moon Lord.
+* The Falling Flame can now also be worn as an accessory to boost max move speed! Its original use still exists.
 
 ### Aug. 7, 2019
 

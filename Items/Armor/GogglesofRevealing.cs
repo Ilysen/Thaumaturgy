@@ -28,11 +28,11 @@ namespace Thaumaturgy.Items.Armor
         }
 
 		public override void UpdateEquip(Player player)
-		{
-			player.AddBuff(BuffID.NightOwl, 2);
-			player.AddBuff(BuffID.Spelunker, 2);
-            player.AddBuff(BuffID.Hunter, 2);
-            player.AddBuff(BuffID.Dangersense, 2);
+        {
+            player.nightVision = true;
+            player.findTreasure = true;
+            player.detectCreature = true;
+            player.dangerSense = true;
         }
 
         public override void AddRecipes()

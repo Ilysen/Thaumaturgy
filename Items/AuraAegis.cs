@@ -53,7 +53,7 @@ namespace Thaumaturgy.Items
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.EoCShield);
             recipe.AddIngredient(ItemID.AnkhShield);
-            recipe.AddIngredient(mod.ItemType("AlchemicalBrass"), 5);
+            recipe.AddIngredient(mod.ItemType("Starbrass"), 5);
             recipe.AddIngredient(mod.ItemType("AuricCore"), 3);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

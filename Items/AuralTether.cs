@@ -70,7 +70,7 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(ItemID.MagicMirror);
             recipe.AddIngredient(ItemID.Book, 3);
             recipe.AddIngredient(mod.ItemType("AuricCore"), 3);
-            recipe.AddIngredient(mod.ItemType("AlchemicalBrass"), 5);
+            recipe.AddIngredient(mod.ItemType("Starbrass"), 5);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.SetResult(this);

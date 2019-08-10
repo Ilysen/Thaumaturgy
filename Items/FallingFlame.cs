@@ -10,7 +10,7 @@ namespace Thaumaturgy.Items
         {
             DisplayName.SetDefault("Falling Flame");
             Tooltip.SetDefault("An overloaded fallen star\n" +
-                "Hurls you far into the distance\n" +
+                "Use to hurl you far into the distance, or wear as an accessory to boost max move speed\n" +
                 "Falling protection not included");
         }
 
@@ -25,8 +25,14 @@ namespace Thaumaturgy.Items
 			item.rare = 3;
             item.UseSound = SoundID.Item62;
             item.maxStack = 99;
+            item.accessory = true;
             item.consumable = true;
 			item.noMelee = true;
+        }
+
+        public override void UpdateEquip(Player player)
+        {
+            player.maxRunSpeed += 6;
         }
 
         public override bool UseItem(Player player)
