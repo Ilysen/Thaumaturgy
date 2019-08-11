@@ -15,10 +15,20 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 * **Xhuis** - Code, sprites.
 * **Ilysen** - Code, sprites, and writing after 1.0.15.0.
-* **Flaqzar** - Sprites for the Starbrass armor set.
+* **Flaqzar** - Sprites for the starbrass armor set, starbrass tools, auric steel, and auric steel tools.
 * **Re-Logic** - Terraria, and the sprites I used as reference/basis for Thaumaturgy's!
 
 # Changelog
+
+### Aug. 11, 2019
+
+#### 1.0.18.5
+
+* Rebalanced the value of tools and accessories to not make reforging wholly unfeasible.
+* Added the Starbrass Pickaxe and Starbrass Hamaxe. Both deal magic damage instead of melee damage!
+* Corrected the Auric Gunshell's tooltip stating that it had no knockback; guns would add knockback to it in spite of it having no innate knockback.
+* Added Auric Steel. Make it with starbrass, meteorite, and iron or lead bars. It's included in the recipe for auromechanical armor, and can be used to make the Auric Steel Waraxe.
+* Added the Auric Steel Waraxe, which is a pre-Hardmode melee weapon with high critical chance and deals magic damage.
 
 ### Aug. 10, 2019
 

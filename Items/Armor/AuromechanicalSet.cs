@@ -1,6 +1,4 @@
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Thaumaturgy.Items.Armor
@@ -53,10 +51,14 @@ namespace Thaumaturgy.Items.Armor
 
         public override void AddRecipes()
         {
+            // NOTE FOR CODE READERS.
+            // IT'S "GogglesofRevealing", NOT "GogglesOfRevealing"
+            // THIS TOOK ME AN HOUR TO FIND OUT WHY THE RECIPE WASN'T WORKING AND I WAS TEARING MY HAIR OUT.
+            // I HOPE IT WAS WORTH IT.
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("GogglesOfRevealing"));
+            recipe.AddIngredient(mod.ItemType("GogglesofRevealing"));
             recipe.AddIngredient(mod.ItemType("StarbrassMask"));
-            recipe.AddIngredient(ItemID.Meteorite, 10);
+            recipe.AddIngredient(mod.ItemType("AuricSteel"), 3);
             recipe.AddIngredient(mod.ItemType("AuricShard"), 5);
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
@@ -93,7 +95,7 @@ namespace Thaumaturgy.Items.Armor
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("StarbrassBreastplate"));
-            recipe.AddIngredient(ItemID.Meteorite, 20);
+            recipe.AddIngredient(mod.ItemType("AuricSteel"), 9);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
@@ -130,7 +132,7 @@ namespace Thaumaturgy.Items.Armor
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("StarbrassGreaves"));
-            recipe.AddIngredient(ItemID.Meteorite, 15);
+            recipe.AddIngredient(mod.ItemType("AuricSteel"), 6);
             recipe.AddIngredient(mod.ItemType("AuricShard"), 5);
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));

@@ -75,7 +75,7 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Starbrass");
-            Tooltip.SetDefault("A strong, mana-conductive alloy\nPioneered by a thaumaturge from an ancient land");
+            Tooltip.SetDefault("A strong, mana-conductive metal\nPioneered by a thaumaturge from an ancient land");
         }
 
         public override void SetDefaults()
@@ -85,6 +85,36 @@ namespace Thaumaturgy.Items
             item.maxStack = 999;
             item.value = Item.sellPrice(0, 0, 5, 0);
             item.rare = 1;
+        }
+    }
+
+    public class AuricSteel : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Auric Steel");
+            Tooltip.SetDefault("Starbrass melded with other materials\nStronger, but less conductive to mana");
+        }
+
+        public override void SetDefaults()
+        {
+            item.width = 30;
+            item.height = 24;
+            item.maxStack = 999;
+            item.value = Item.sellPrice(0, 0, 10, 0);
+            item.rare = 1;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.Meteorite);
+            recipe.AddIngredient(mod.ItemType("Starbrass"));
+            recipe.AddRecipeGroup("IronBar");
+            recipe.SetResult(this);
+            recipe.AddTile(mod.TileType("Thaumatrestle"));
+            recipe.AddTile(mod.TileType("SynthesisFocus"));
+            recipe.AddRecipe();
         }
     }
 

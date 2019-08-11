@@ -8,7 +8,7 @@ namespace Thaumaturgy.Items.Armor
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Starbrass Helmet");
+            DisplayName.SetDefault("Starbrass Mask");
             Tooltip.SetDefault("Mana usage reduced by 10%");
         }
 

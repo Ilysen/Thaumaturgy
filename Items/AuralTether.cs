@@ -7,7 +7,6 @@ namespace Thaumaturgy.Items
 {
 	public class AuralTether : ModItem
 	{
-        private Vector2 pseudoNull = new Vector2(0, 0);
         private Vector2 markedPoint;
 
         public override void SetStaticDefaults()
@@ -31,19 +30,19 @@ namespace Thaumaturgy.Items
             item.maxStack = 1;
             item.consumable = false;
 			item.noMelee = true;
-            markedPoint = pseudoNull;
+            markedPoint = default;
         }
 
         public override bool UseItem(Player player)
         {
             if(player.altFunctionUse == 2)
             {
-                markedPoint = pseudoNull;
+                markedPoint = default;
                 Main.NewText("Tether point reset.", 135, 115, 255);
                 Main.PlaySound(SoundID.Item73.WithVolume(0.5f), player.Center);
                 return true;
             }
-            if (markedPoint == pseudoNull)
+            if (markedPoint == default)
             {
                 Main.NewText("Tether point marked.", 135, 115, 255);
                 markedPoint = player.position;
@@ -54,7 +53,7 @@ namespace Thaumaturgy.Items
                 Main.NewText("The tether yanks you through space and time.", 135, 115, 255);
                 player.Teleport(markedPoint);
                 Main.PlaySound(SoundID.Item74.WithVolume(0.5f), player.Center);
-                markedPoint = pseudoNull;
+                markedPoint = default;
             }
             return true;
         }

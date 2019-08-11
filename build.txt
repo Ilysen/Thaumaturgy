@@ -1,4 +1,4 @@
 author = Ilysen
-version = 1.0.18.4
+version = 1.0.18.5
 displayName = Thaumaturgy
 homepage = https://forums.terraria.org/index.php?threads/avas-mods-thaumaturgy-challenge-runes-yabssm.81892/

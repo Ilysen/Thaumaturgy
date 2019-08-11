@@ -18,7 +18,7 @@ namespace Thaumaturgy.Items
 		{
 			item.width = 24;
 			item.height = 28;
-            item.value = Item.sellPrice(0, 25, 0, 0);
+            item.value = Item.sellPrice(0, 5, 0, 0);
             item.rare = 9;
 			item.accessory = true;
 			item.defense = 6;

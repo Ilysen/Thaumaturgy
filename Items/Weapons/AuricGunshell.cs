@@ -9,7 +9,7 @@ namespace Thaumaturgy.Items.Weapons
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Auric Gunshell");
-            Tooltip.SetDefault("An infinite source of ethereal bullets\nNo knockback, but can pierce");
+            Tooltip.SetDefault("An infinite source of ethereal bullets\nVery low knockback, but can pierce");
 		}
 
 		public override void SetDefaults()
