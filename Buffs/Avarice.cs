@@ -1,6 +1,4 @@
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Thaumaturgy.Buffs
@@ -10,7 +8,7 @@ namespace Thaumaturgy.Buffs
 		public override void SetDefaults()
         {
             DisplayName.SetDefault("Avarice");
-            Description.SetDefault("Coin pickup range is increased");
+            Description.SetDefault("Fortune and coin pickup range are increased");
             Main.buffNoSave[Type] = true;
             Main.debuff[Type] = false;
             canBeCleared = true;

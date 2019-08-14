@@ -766,7 +766,9 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Auric Elixir of the Baron's Hoard");
-            Tooltip.SetDefault("Increases coin pickup range\nNot consumed upon use");
+            Tooltip.SetDefault("Increases coin pickup range\n" +
+                "Some ores may give more yield\n" +
+                "Not consumed upon use");
         }
 
         public override void SetDefaults()

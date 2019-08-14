@@ -158,6 +158,27 @@ namespace Thaumaturgy
             recipe.SetResult(ItemID.HermesBoots);
             recipe.AddRecipe();
 
+            //Water Walking Boots - 10 silk, 1 potion of water walking, and 1 auric core
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.Silk, 10);
+            recipe.AddIngredient(ItemID.WaterWalkingPotion);
+            recipe.AddIngredient(this.ItemType("AuricCore"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.WaterWalkingBoots);
+            recipe.AddRecipe();
+
+            //Lava Charm - 1 chain, 3 hellstone bars, 1 obsidian skin potion, and 1 auric core
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.Chain);
+            recipe.AddIngredient(ItemID.HellstoneBar);
+            recipe.AddIngredient(ItemID.ObsidianSkinPotion);
+            recipe.AddIngredient(this.ItemType("AuricCore"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.LavaCharm);
+            recipe.AddRecipe();
+
             //Aglet - 5 iron bars and 1 auric shard
             recipe = new ModRecipe(this);
             recipe.AddRecipeGroup("IronBar", 5);
@@ -188,13 +209,11 @@ namespace Thaumaturgy
             recipe.SetResult(ItemID.IceSkates);
             recipe.AddRecipe();
 
-            //Fish Finder - 5 iron bars, 2 gold bars, 10 wire, 1 radar, 3 crystal shards, 5 sapphires, 1 mechanical lens, and 1 auric core
+            //Fish Finder - 5 iron bars, 2 gold bars, 10 wire, 5 sapphires, 1 mechanical lens, and 1 auric core
             recipe = new ModRecipe(this);
             recipe.AddRecipeGroup("IronBar", 5);
             recipe.AddRecipeGroup("Thaumaturgy:GoldBar", 2);
             recipe.AddIngredient(ItemID.Wire, 10);
-            recipe.AddIngredient(ItemID.Radar, 1);
-            recipe.AddIngredient(ItemID.CrystalShard, 3);
             recipe.AddIngredient(ItemID.Sapphire, 5);
             recipe.AddIngredient(ItemID.MechanicalLens, 1);
             recipe.AddIngredient(this.ItemType("AuricCore"));

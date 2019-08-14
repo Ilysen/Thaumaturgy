@@ -93,7 +93,7 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Auric Steel");
-            Tooltip.SetDefault("Starbrass melded with other materials\nStronger, but less conductive to mana");
+            Tooltip.SetDefault("Starbrass melded with other materials\nStronger, and more conductive to mana");
         }
 
         public override void SetDefaults()

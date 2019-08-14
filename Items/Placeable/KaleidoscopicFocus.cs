@@ -24,9 +24,9 @@ namespace Thaumaturgy.Items.Placeable
             recipe.AddIngredient(ItemID.Marble);
             recipe.AddIngredient(ItemID.Meteorite);
             recipe.AddIngredient(ItemID.Hellstone);
-            recipe.AddIngredient(ItemID.Cloud);
-            recipe.AddIngredient(ItemID.PearlstoneBlock);
-            recipe.AddRecipeGroup("Thaumaturgy:EvilStone");
+            recipe.AddIngredient(ItemID.SoulofFlight);
+            recipe.AddIngredient(ItemID.SoulofLight);
+            recipe.AddIngredient(ItemID.SoulofNight);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.SetResult(this);

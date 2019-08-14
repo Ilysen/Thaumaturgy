@@ -3,7 +3,7 @@ A mod for Terraria including magic and a doomed scholar.
 
 Thaumaturgy adds an upgraded work bench, the Thaumatrestle, which is sold by a new town NPC, the Thaumaturge, a haunted academic who wants to put his skills to use. The Thaumatrestle can be used to break down fallen stars and mana crystals into power sources - auric shards and auric cores - which can then be used to craft, shape, transform, brew, and change objects in any way you can imagine.
 
-The Thaumaturge will move in after defeating the Eye of Cthulhu. They are also eligibile from the get-go if the world is in Expert mode. They sell the Thaumatrestle for 1 gold, and pale stars for 10 silver. Pale stars can be used to ineffeciently make auric shards and auric cores, but have none of the other uses that fallen stars do. Once hardmode starts, the Thaumaturge will sell actual fallen stars for 25 silver instead.
+The Thaumaturge will move in after defeating the Eye of Cthulhu. They are also eligibile from the get-go if the world is in Expert mode. They sell the Thaumatrestle for 1 gold, and pale stars for 10 silver. Pale stars can be used to ineffeciently make auric shards and auric cores, but have none of the other uses that fallen stars do.
 
 Examples of recipes added by Thaumaturgy use include transmuting 25 crimstone into 25 ebonstone with an auric shard, creating a cloud in a bottle with 1 bottle, 20 clouds, and 3 auric shards, or replicating a piece of wood into 75 wood with an auric shard. All recipes are made at a Thaumatrestle, and most require a specialized focus nearby, which you can also purchase from the Thaumaturge.
 
@@ -19,6 +19,22 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 * **Re-Logic** - Terraria, and the sprites I used as reference/basis for Thaumaturgy's!
 
 # Changelog
+
+### Aug. 13, 2019
+
+#### 1.0.18.6
+
+* Added the Eternal Ordeal accessory, which prevents invasions from ending while worn. Farm away!
+* Added the Purity Tablet, which prematurely ends Blood Moons and Solar Eclipses.
+* Flasks can now be reused infinitely.
+* Fixed the Auric Steel Waraxe using starbrass in its recipe instead of actual auric steel.
+* Avarice now causes gem ores to drop extra gems!
+* Slightly tweaked the Kaleidoscopic's Focus recipe (again) by adding souls of light, night, and flight to it.
+* Removed crystal shards and the radar from the fish finder alternate recipe. (what the heck why were those there)
+* Added the Terra Treads, a combination of frostspark boots and lava waders.
+* Also added late-PH recipes for water walking boots and the lava charm to compensate for their rarity.
+
+There are currently no safeguards in place preventing use of Eternal Ordeal and Purity Tablet in multiplayer. If someone wants to grief, they can; I can't easily fix that. Please be aware of that.
 
 ### Aug. 11, 2019
 

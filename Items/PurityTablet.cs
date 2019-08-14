@@ -4,12 +4,13 @@ using Terraria.ModLoader;
 
 namespace Thaumaturgy.Items
 {
-	public class SlateTablet : ModItem
+	public class PurityTablet : ModItem
 	{
 		public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Slate Tablet");
-            Tooltip.SetDefault("Blackened rock seeping with dark energy\nUse to chant the words and call forth the blood moon during nighttime");
+            DisplayName.SetDefault("Purity Tablet");
+            Tooltip.SetDefault("A tablet etched with words of harmony\n" +
+                "Prematurely ends events relating to the sun or moon");
         }
 
 		public override void SetDefaults()
@@ -20,7 +21,7 @@ namespace Thaumaturgy.Items
 			item.useAnimation = 20;
 			item.useStyle = 4;
 			item.value = Item.sellPrice(0, 0, 25, 0);
-			item.rare = 3;
+			item.rare = 2;
             item.maxStack = 99;
             item.consumable = true;
 			item.noMelee = true;
@@ -28,14 +29,16 @@ namespace Thaumaturgy.Items
 
         public override bool CanUseItem(Player player)
         {
-            return !Main.dayTime && !Main.bloodMoon;
+            return Main.bloodMoon || Main.eclipse || Main.pumpkinMoon || Main.snowMoon;
         }
 
         public override bool UseItem(Player player)
         {
-            Main.bloodMoon = true;
-            Main.PlaySound(SoundID.NPCDeath10.WithVolume(.5f), player.Center);
-            Main.NewText("The Blood Moon is rising...", 185, 0, 30);
+            Main.bloodMoon = false;
+            Main.eclipse = false;
+            Main.pumpkinMoon = false;
+            Main.snowMoon = false;
+            Main.PlaySound(SoundID.Item60.WithVolume(0.5f), player.Center);
             return true;
         }
 
@@ -43,7 +46,8 @@ namespace Thaumaturgy.Items
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Boulder);
-            recipe.AddRecipeGroup("Thaumaturgy:CrimtaneOrDemonite", 10);
+            recipe.AddIngredient(ItemID.GrassSeeds, 3);
+            recipe.AddIngredient(ItemID.Acorn);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

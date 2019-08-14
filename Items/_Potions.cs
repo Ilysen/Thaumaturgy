@@ -9,7 +9,8 @@ namespace Thaumaturgy.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Avarice Potion");
-            Tooltip.SetDefault("Increases coin pickup range");
+            Tooltip.SetDefault("Increases coin pickup range\n" +
+                "Some ores may give more yield");
         }
 
         public override void SetDefaults()

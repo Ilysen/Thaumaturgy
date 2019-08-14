@@ -20,11 +20,11 @@ namespace Thaumaturgy.Items
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;
+            item.maxStack = 1;
             item.width = 20;
             item.height = 20;
             item.value = Item.sellPrice(0, 10, 0, 0);
-            item.consumable = true;
+            item.consumable = false;
             item.rare = 4;
         }
 
@@ -69,11 +69,11 @@ namespace Thaumaturgy.Items
                 item.useTurn = true;
                 item.useAnimation = 17;
                 item.useTime = 17;
-                item.maxStack = 99;
+                item.maxStack = 1;
                 item.width = 20;
                 item.height = 20;
                 item.value = Item.sellPrice(0, 10, 0, 0);
-                item.consumable = true;
+                item.consumable = false;
                 item.rare = 4;
             }
 
@@ -119,11 +119,11 @@ namespace Thaumaturgy.Items
                 item.useTurn = true;
                 item.useAnimation = 17;
                 item.useTime = 17;
-                item.maxStack = 99;
+                item.maxStack = 1;
                 item.width = 20;
                 item.height = 20;
                 item.value = Item.sellPrice(0, 10, 0, 0);
-                item.consumable = true;
+                item.consumable = false;
                 item.rare = 4;
             }
 
@@ -168,11 +168,11 @@ namespace Thaumaturgy.Items
                 item.useTurn = true;
                 item.useAnimation = 17;
                 item.useTime = 17;
-                item.maxStack = 99;
+                item.maxStack = 1;
                 item.width = 20;
                 item.height = 20;
                 item.value = Item.sellPrice(0, 10, 0, 0);
-                item.consumable = true;
+                item.consumable = false;
                 item.rare = 4;
             }
 

@@ -28,7 +28,7 @@ namespace Thaumaturgy.Items
             item.scale = 1.3f;
             item.value = Item.sellPrice(0, 0, 40, 0);
 			item.rare = 1;
-            item.crit = 20;
+            item.crit = 25;
             item.maxStack = 1;
             item.UseSound = SoundID.Item1;
         }
@@ -36,7 +36,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("Starbrass"), 15);
+            recipe.AddIngredient(mod.ItemType("AuricSteel"), 15);
             recipe.AddRecipeGroup("Wood", 5);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 5);
