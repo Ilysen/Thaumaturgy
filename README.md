@@ -15,7 +15,7 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 * **Xhuis** - Code, sprites.
 * **Ilysen** - Code, sprites, and writing after 1.0.15.0.
-* **Flaqzar** - Sprites for the starbrass armor set, starbrass tools, auric steel, and auric steel tools.
+* **Flaqzar** - Sprites for the starbrass armor set, starbrass tools, auric steel, auric steel tools, and all of the elixirs, potions, and draughts.
 * **Re-Logic** - Terraria, and the sprites used as reference and basis for Thaumaturgy's.
 
 # Changelog
