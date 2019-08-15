@@ -53,9 +53,8 @@ namespace Thaumaturgy.Items
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.BottledWater);
-            recipe.AddIngredient(ItemID.Starfish);
             recipe.AddIngredient(ItemID.Goldfish, 3);
-            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.SetResult(this);

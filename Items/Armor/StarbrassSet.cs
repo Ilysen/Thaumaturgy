@@ -47,7 +47,7 @@ namespace Thaumaturgy.Items.Armor
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("Starbrass"), 10);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 2);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

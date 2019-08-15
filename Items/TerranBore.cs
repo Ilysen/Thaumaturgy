@@ -93,7 +93,7 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(ItemID.SilkRopeCoil, 100);
             recipe.AddIngredient(ItemID.DiamondGemsparkBlock, 30);
             recipe.AddIngredient(mod.ItemType("Starbrass"), 30);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 10);
+            recipe.AddIngredient(mod.ItemType("AuricCore"), 5);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.SetResult(this);

@@ -106,7 +106,7 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(ItemID.Wire, 30);
             recipe.AddIngredient(ItemID.MeteoriteBar, 3);
             recipe.AddIngredient(ItemID.Obsidian, 5);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 5);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddIngredient(mod.ItemType("AuricShard"), 25);
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));

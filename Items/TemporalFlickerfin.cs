@@ -35,7 +35,7 @@ namespace Thaumaturgy.Items
         public override bool UseItem(Player player)
         {
             Main.anglerQuestFinished = false;
-            Main.NewText("Time seems to slow for a moment.", 100, 100, 255);
+            Thaumaturgy.NewText(player, "Time seems to slow for a moment.", 100, 100, 255);
             return true;
         }
 
@@ -43,7 +43,7 @@ namespace Thaumaturgy.Items
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddRecipeGroup("Thaumaturgy:PreyFish");
-            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 5);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("TransmutationFocus"));
             recipe.SetResult(this);

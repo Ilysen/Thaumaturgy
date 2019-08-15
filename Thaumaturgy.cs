@@ -16,6 +16,14 @@ namespace Thaumaturgy
             };
         }
 
+        public static void NewText(Player player, string text, byte r, byte g, byte b)
+        {
+            if (player.whoAmI == Main.myPlayer)
+            {
+                Main.NewText(text, r, g, b);
+            }
+        }
+
         public override void AddRecipeGroups()
         {
             RecipeGroup group = new RecipeGroup(() => "Iron or Lead Ore", new int[]
@@ -308,6 +316,25 @@ namespace Thaumaturgy
             recipe.AddTile(this.TileType("Thaumatrestle"));
             recipe.AddTile(this.TileType("SynthesisFocus"));
             recipe.SetResult(ItemID.EndlessMusketPouch);
+            recipe.AddRecipe();
+
+            //Enchanted Nightcrawler - 1 worm and 1 auric shard
+            recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.Worm);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("TransmutationFocus"));
+            recipe.SetResult(ItemID.EnchantedNightcrawler);
+            recipe.AddRecipe();
+
+            //Wand of Sparking - 1 wood, 1 torch, and 1 auric shard
+            recipe = new ModRecipe(this);
+            recipe.AddRecipeGroup("Wood");
+            recipe.AddIngredient(ItemID.Torch);
+            recipe.AddIngredient(this.ItemType("AuricShard"));
+            recipe.AddTile(this.TileType("Thaumatrestle"));
+            recipe.AddTile(this.TileType("SynthesisFocus"));
+            recipe.SetResult(ItemID.WandofSparking);
             recipe.AddRecipe();
 
             /////////////

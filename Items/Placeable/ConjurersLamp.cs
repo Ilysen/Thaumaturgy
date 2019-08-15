@@ -59,7 +59,6 @@ namespace Thaumaturgy.Items.Placeable
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Torch, 5);
             recipe.AddIngredient(mod.ItemType("AuricShard"), 10);
-            recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddRecipeGroup("Thaumaturgy:IronBar", 3);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

@@ -16,9 +16,25 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 * **Xhuis** - Code, sprites.
 * **Ilysen** - Code, sprites, and writing after 1.0.15.0.
 * **Flaqzar** - Sprites for the starbrass armor set, starbrass tools, auric steel, and auric steel tools.
-* **Re-Logic** - Terraria, and the sprites I used as reference/basis for Thaumaturgy's!
+* **Re-Logic** - Terraria, and the sprites used as reference and basis for Thaumaturgy's.
 
 # Changelog
+
+### Aug. 15, 2019
+
+#### 1.0.18.8
+
+* Added the Champion's Crest, which combines the effects of all pre-Moon Lord expert accessories.
+* Reduced auric core and shard costs across the board.
+* Changed bottled lightning to use an auric shard in its recipe instead of an auric core, and removed its starfish requirement.
+* The aural tether now has two different sprites, for telling if its mark is set at a glance.
+
+### Aug. 14, 2019
+
+#### 1.0.18.7
+
+* Fixed an issue with Avarice's gem yield buff not working in multiplayer. (Thanks, jopojelly!)
+* Added recipes for the enchanted nightcrawler and wand of sparking.
 
 ### Aug. 13, 2019
 

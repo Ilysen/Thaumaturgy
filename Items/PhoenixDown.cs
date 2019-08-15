@@ -26,9 +26,9 @@ namespace Thaumaturgy.Items
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Feather, 10);
-            recipe.AddIngredient(ItemID.SoulofFlight, 25);
-            recipe.AddIngredient(ItemID.SoulofLight, 25);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 2);
+            recipe.AddIngredient(ItemID.SoulofFlight, 10);
+            recipe.AddIngredient(ItemID.SoulofLight, 5);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));
@@ -36,8 +36,7 @@ namespace Thaumaturgy.Items
 
             recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.FireFeather);
-            recipe.AddIngredient(ItemID.SoulofLight, 25);
-            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 10);
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

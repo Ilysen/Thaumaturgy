@@ -38,8 +38,7 @@ namespace Thaumaturgy.Items
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("AuricSteel"), 15);
             recipe.AddRecipeGroup("Wood", 5);
-            recipe.AddIngredient(mod.ItemType("AuricCore"));
-            recipe.AddIngredient(mod.ItemType("AuricShard"), 5);
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
             recipe.AddIngredient(ItemID.MeteorHamaxe);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

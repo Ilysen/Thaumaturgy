@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -18,7 +19,7 @@ namespace Thaumaturgy.Items
                 "Must be on your hotbar to work");
         }
 
-		public override void SetDefaults()
+        public override void SetDefaults()
 		{
 			item.width = 24;
 			item.height = 24;
@@ -33,24 +34,35 @@ namespace Thaumaturgy.Items
             markedPoint = default;
         }
 
+        public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
+        {
+            if (markedPoint != default)
+            {
+                Texture2D texture = mod.GetTexture("Items/AuralTether_Set");
+                spriteBatch.Draw(texture, position, null, Color.White, 0, origin, scale, SpriteEffects.None, 0f);
+                return false;
+            }
+            return true;
+        }
+
         public override bool UseItem(Player player)
         {
             if(player.altFunctionUse == 2)
             {
                 markedPoint = default;
-                Main.NewText("Tether point reset.", 135, 115, 255);
+                Thaumaturgy.NewText(player, "Tether point reset.", 135, 115, 255);
                 Main.PlaySound(SoundID.Item73.WithVolume(0.5f), player.Center);
                 return true;
             }
             if (markedPoint == default)
             {
-                Main.NewText("Tether point marked.", 135, 115, 255);
+                Thaumaturgy.NewText(player, "Tether point marked.", 135, 115, 255);
                 markedPoint = player.position;
                 Main.PlaySound(SoundID.Item73.WithVolume(0.5f), player.Center);
             }
             else
             {
-                Main.NewText("The tether yanks you through space and time.", 135, 115, 255);
+                Thaumaturgy.NewText(player, "The tether yanks you through space and time.", 135, 115, 255);
                 player.Teleport(markedPoint);
                 Main.PlaySound(SoundID.Item74.WithVolume(0.5f), player.Center);
                 markedPoint = default;
@@ -68,7 +80,7 @@ namespace Thaumaturgy.Items
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.MagicMirror);
             recipe.AddIngredient(ItemID.Book, 3);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 3);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddIngredient(mod.ItemType("Starbrass"), 5);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

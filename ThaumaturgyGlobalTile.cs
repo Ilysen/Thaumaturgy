@@ -8,10 +8,30 @@ namespace Thaumaturgy
     {
         public override bool Drop(int i, int j, int type)
         {
-            Player ourPlayer = Main.player[Main.myPlayer];
+            bool baseDropped = base.Drop(i, j, type);
+            bool avariceActive = false;
+            if (Main.netMode == NetmodeID.Server)
+            {
+                foreach (Player ourPlayer in Main.player)
+                {
+                    if (ourPlayer.active && (ourPlayer.HasBuff(mod.BuffType("Avarice")) || ourPlayer.buffImmune[mod.BuffType("Avarice")]))
+                    {
+                        avariceActive = true;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Player ourPlayer = Main.LocalPlayer;
+                if(ourPlayer.HasBuff(mod.BuffType("Avarice")) || ourPlayer.buffImmune[mod.BuffType("Avarice")])
+                {
+                    avariceActive = true;
+                }
+            }
 
             // only Daring and Daredevilry provide immunity to Avarice - and they both require its elixir - so we apply the effects either way
-            if(ourPlayer.HasBuff(mod.BuffType("Avarice")) || ourPlayer.buffImmune[mod.BuffType("Avarice")])
+            if(avariceActive && baseDropped)
             {
                 int extraGems = Main.rand.Next(1, 3);
                 switch (type)
@@ -36,7 +56,7 @@ namespace Thaumaturgy
                         break;
                 }
             }
-            return base.Drop(i, j, type);
+            return baseDropped;
         }
     }
 }

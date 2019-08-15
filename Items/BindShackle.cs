@@ -31,8 +31,8 @@ namespace Thaumaturgy.Items
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Shackle, 1);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 1);
-            recipe.AddIngredient(mod.ItemType("AuricShard"), 3);
+            recipe.AddIngredient(mod.ItemType("AuricCore"));
+            recipe.AddIngredient(mod.ItemType("AuricShard"), 5);
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));
