@@ -36,13 +36,13 @@ namespace Thaumaturgy.Items
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
+            Texture2D texture = mod.GetTexture("Items/AuralTether");
             if (markedPoint != default)
             {
-                Texture2D texture = mod.GetTexture("Items/AuralTether_Set");
-                spriteBatch.Draw(texture, position, null, Color.White, 0, origin, scale, SpriteEffects.None, 0f);
-                return false;
+                texture = mod.GetTexture("Items/AuralTether_Set");
             }
-            return true;
+            spriteBatch.Draw(texture, position, null, Color.White, 0, origin, scale, SpriteEffects.None, 0f);
+            return false;
         }
 
         public override bool UseItem(Player player)

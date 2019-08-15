@@ -22,6 +22,11 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Aug. 15, 2019
 
+#### 1.0.18.9
+
+* New sprites for all elixirs, potions, and draughts by Flaqzar. Thank you very much.
+* The aural tether's sprite swap now only adjusts the "mirror" portion of the item, instead of the frame as well.
+
 #### 1.0.18.8
 
 * Added the Champion's Crest, which combines the effects of all pre-Moon Lord expert accessories.
