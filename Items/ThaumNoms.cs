@@ -9,7 +9,8 @@ namespace Thaumaturgy.Items
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Thaumic Pie");
-            Tooltip.SetDefault("Minor improvements to all stats\nSelf-applies from your inventory\n60 minute duration");
+            Tooltip.SetDefault("Minor improvements to all stats while in your inventory\n" +
+                "Doesn't take up a buff slot; benefits won't be visible as a buff");
         }
 
 		public override void SetDefaults()
@@ -31,5 +32,24 @@ namespace Thaumaturgy.Items
             recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
+
+        public override void UpdateInventory(Player player)
+        {
+            player.buffImmune[BuffID.WellFed] = true;
+            player.wellFed = true;
+            player.statDefense += 2;
+            player.meleeCrit += 2;
+            player.magicCrit += 2;
+            player.rangedCrit += 2;
+            player.thrownCrit += 2;
+            player.meleeDamage += 0.05f;
+            player.magicDamage += 0.05f;
+            player.rangedDamage += 0.05f;
+            player.thrownDamage += 0.05f;
+            player.minionDamage += 0.05f;
+            player.minionKB += 0.5f;
+            player.meleeSpeed += 0.05f;
+            player.moveSpeed += 0.2f;
+        }
     }
 }

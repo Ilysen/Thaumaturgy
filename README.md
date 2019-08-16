@@ -22,6 +22,10 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 ### Aug. 15, 2019
 
+#### 1.0.18.10
+
+* Micro-optimisations to Thaumic Pie, which no longer takes up a buff.
+
 #### 1.0.18.9
 
 * New sprites for all elixirs, potions, and draughts by Flaqzar. Thank you very much.

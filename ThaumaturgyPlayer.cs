@@ -47,14 +47,5 @@ namespace Thaumaturgy
             }
             return base.PreKill(damage, hitDirection, pvp, ref playSound, ref genGore, ref damageSource);
         }
-
-        public override void PostUpdate()
-        {
-            if(player.HasItem(mod.ItemType("ThaumNoms")) && !player.HasBuff(BuffID.WellFed))
-            {
-                player.AddBuff(BuffID.WellFed, 216000);
-            }
-            base.PostUpdate();
-        }
     }
 }
