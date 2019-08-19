@@ -10,7 +10,7 @@ namespace Thaumaturgy.Items
         {
             DisplayName.SetDefault("Falling Flame");
             Tooltip.SetDefault("An overloaded fallen star\n" +
-                "Use to hurl you far into the distance, or wear as an accessory to boost max move speed\n" +
+                "Use to hurl you far into the distance\n" +
                 "Falling protection not included");
         }
 
@@ -25,14 +25,8 @@ namespace Thaumaturgy.Items
 			item.rare = 3;
             item.UseSound = SoundID.Item62;
             item.maxStack = 99;
-            item.accessory = true;
             item.consumable = true;
 			item.noMelee = true;
-        }
-
-        public override void UpdateEquip(Player player)
-        {
-            player.maxRunSpeed += 6;
         }
 
         public override bool UseItem(Player player)
@@ -46,7 +40,7 @@ namespace Thaumaturgy.Items
         public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.FallenStar, 10);
+            recipe.AddIngredient(ItemID.FallenStar);
             recipe.AddIngredient(ItemID.Torch, 10);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));
@@ -55,7 +49,7 @@ namespace Thaumaturgy.Items
 			recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("PaleStar"), 20);
+            recipe.AddIngredient(mod.ItemType("PaleStar"), 2);
             recipe.AddIngredient(ItemID.Torch, 10);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));

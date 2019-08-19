@@ -20,6 +20,13 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Aug. 19, 2019
+
+#### 1.0.18.11
+
+* Reduced the cost of the falling flame, from 10 -> 1 fallen star or 20 -> 2 pale stars.
+* The falling flame can no longer be worn as an accessory, due to weirdness with it. Instead, a new accessory - called Velocity in a Jar - can be crafted using it that replicates the same effect.
+
 ### Aug. 15, 2019
 
 #### 1.0.18.10
