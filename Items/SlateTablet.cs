@@ -36,6 +36,10 @@ namespace Thaumaturgy.Items
             Main.bloodMoon = true;
             Main.PlaySound(SoundID.NPCDeath10.WithVolume(.5f), player.Center);
             Main.NewText("The Blood Moon is rising...", 185, 0, 30);
+            if (Main.netMode == NetmodeID.Server)
+            {
+                NetMessage.SendData(MessageID.WorldData);
+            }
             return true;
         }
 

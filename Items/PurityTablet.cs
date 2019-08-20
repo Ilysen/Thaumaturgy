@@ -34,10 +34,14 @@ namespace Thaumaturgy.Items
 
         public override bool UseItem(Player player)
         {
-            Main.bloodMoon = false;
             Main.eclipse = false;
+            Main.bloodMoon = false;
             Main.pumpkinMoon = false;
             Main.snowMoon = false;
+            if (Main.netMode == NetmodeID.Server)
+            {
+                NetMessage.SendData(MessageID.WorldData);
+            }
             Main.PlaySound(SoundID.Item60.WithVolume(0.5f), player.Center);
             return true;
         }

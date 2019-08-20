@@ -20,6 +20,12 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Aug. 20, 2019
+
+#### 1.0.18.12
+
+* Fixes towards multiplayer use of the two tablet types.
+
 ### Aug. 19, 2019
 
 #### 1.0.18.11
