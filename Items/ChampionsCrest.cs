@@ -69,7 +69,8 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(ItemID.RoyalGel);
             recipe.AddIngredient(ItemID.EoCShield);
             recipe.AddIngredient(ItemID.WormScarf);
-            recipe.AddIngredient(ItemID.SporeSac);
+			recipe.AddIngredient(ItemID.HiveBackpack);
+			recipe.AddIngredient(ItemID.SporeSac);
             recipe.AddIngredient(ItemID.ShinyStone);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.SetResult(this);
@@ -81,7 +82,8 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(ItemID.RoyalGel);
             recipe.AddIngredient(ItemID.EoCShield);
             recipe.AddIngredient(ItemID.BrainOfConfusion);
-            recipe.AddIngredient(ItemID.SporeSac);
+			recipe.AddIngredient(ItemID.HiveBackpack);
+			recipe.AddIngredient(ItemID.SporeSac);
             recipe.AddIngredient(ItemID.ShinyStone);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.SetResult(this);

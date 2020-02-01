@@ -20,6 +20,18 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Jan. 31, 2020
+
+Been a while!
+
+* Starbrass is now sold after Skeletron, instead of after the Eater of Worlds/Brain of Cthulhu. Because these bosses are sometimes skipped, it caused a strange hole in progression through the mod.
+* Brightened the thaumatrestle's sprite.
+* The Conjurer's Lamp now provides light while held in-hand.
+* The Conjurer's Lamp can now consistently place glimmer lights underwater.
+  * This was always intended design, but I originally hit a roadblock trying to make the torches linger underwater. I now know a lot more about C#, and so I'm able to rectify this.
+* Fixed the Champion's Crest recipe not requiring a Hive Pack.
+* Tidied up some code.
+
 ### Aug. 20, 2019
 
 #### 1.0.18.12
