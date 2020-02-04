@@ -5,9 +5,11 @@ using Terraria.ModLoader;
 namespace Thaumaturgy.Items
 {
     public class Sundew : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Items/Sundew";
+		public override void SetStaticDefaults()
         {
+			// I would have named it Stardew, but then I'd get sued
             DisplayName.SetDefault("Sundew");
             Tooltip.SetDefault("Slightly increases movement speed and decreases enemy spawns");
         }

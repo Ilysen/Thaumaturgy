@@ -15,31 +15,31 @@ namespace Thaumaturgy.Projectiles
 
 		public override void SetDefaults()
 		{
-            projectile.CloneDefaults(ProjectileID.Bullet);
+			projectile.CloneDefaults(ProjectileID.Bullet);
 			projectile.penetrate = 5;
 			projectile.alpha = 255;
 			projectile.ignoreWater = true;
 			aiType = ProjectileID.Bullet;
-        }
+		}
 
-        public override bool OnTileCollide(Vector2 oldVelocity)
-        {
-            Main.PlaySound(SoundID.Item10, projectile.position);
-            for (var i = 0; i < 3; i++)
-            {
-                Dust.NewDust(projectile.Center, 30, 30, 15, 0, 0, 0, default, 1.5f);
-            }
-            return true;
-        }
+		public override bool OnTileCollide(Vector2 oldVelocity)
+		{
+			Main.PlaySound(SoundID.Item10, projectile.position);
+			for (var i = 0; i < 3; i++)
+			{
+				Dust.NewDust(projectile.Center, 30, 30, 15, 0, 0, 0, default, 1.5f);
+			}
+			return true;
+		}
 
-        public override void AI()
-        {
-            Dust.NewDust(projectile.Center, 5, 5, 15, 0, 0, 0, default, 0.5f);
-            Lighting.AddLight(projectile.Center, 1f, 0.75f, 1f);
-            base.AI();
-        }
+		public override void AI()
+		{
+			Dust.NewDust(projectile.Center, 5, 5, 15, 0, 0, 0, default, 0.5f);
+			Lighting.AddLight(projectile.Center, 1f, 0.75f, 1f);
+			base.AI();
+		}
 
-        public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor)
+		public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor)
 		{
 			Vector2 drawOrigin = new Vector2(Main.projectileTexture[projectile.type].Width * 0.5f, projectile.height * 0.5f);
 			for (int k = 0; k < projectile.oldPos.Length; k++)

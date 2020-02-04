@@ -6,7 +6,8 @@ namespace Thaumaturgy.Items
 {
 	public class AuricSteelWaraxe : ModItem
 	{
-        public override void SetStaticDefaults()
+		public override string Texture => "Thaumaturgy/Textures/Items/AuricSteelWaraxe";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Auric Steel Waraxe");
             Tooltip.SetDefault("Deals magic damage");

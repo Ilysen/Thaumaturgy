@@ -5,6 +5,7 @@ namespace Thaumaturgy.Items
 {
 	public class PaleStar : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Ingredients/PaleStar";
 		public override void SetStaticDefaults()
 		{
             DisplayName.SetDefault("Pale Star");

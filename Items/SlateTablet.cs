@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class SlateTablet : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/SlateTablet";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Slate Tablet");

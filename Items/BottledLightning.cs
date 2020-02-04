@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class BottledLightning : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/BottledLightning";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Bottled Lightning");

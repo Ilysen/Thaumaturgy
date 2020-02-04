@@ -10,7 +10,8 @@ namespace Thaumaturgy.Items
     {
         int soundtimer = 0;
 
-        public override void SetStaticDefaults()
+		public override string Texture => "Thaumaturgy/Textures/Wearable/AurelianHarness";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Aurelian Harness");
             Tooltip.SetDefault("A crude auric jetpack!\nForces aura through meteorite pipes, sealed with obsidian, to allow flight\nCruder than wings, may malfunction");

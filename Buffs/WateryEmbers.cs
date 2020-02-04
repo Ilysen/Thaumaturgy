@@ -11,7 +11,7 @@ namespace Thaumaturgy.Buffs
         {
             DisplayName.SetDefault("Watery Embers");
             Description.SetDefault("Enemy spawn rate tremendously increased");
-            Main.buffNoSave[Type] = true;
+            Main.buffNoSave[Type] = false;
             Main.debuff[Type] = false;
             canBeCleared = true;
         }

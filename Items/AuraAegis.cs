@@ -7,11 +7,15 @@ namespace Thaumaturgy.Items
 	[AutoloadEquip(EquipType.Shield)]
 	public class AuraAegis : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/AuraAegis";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Aura Aegis");
-            Tooltip.SetDefault("Double tap a direction to dash into enemies\nGrants immunity to knockback and fire blocks" +
-                "\nGrants immunity to almost all debuffs");
+            Tooltip.SetDefault("Grants immunity to knockback and fire blocks" +
+                "\nGrants immunity to most standard debuffs" +
+				"\nProtects from Stoned, Chilled, and Frozen" +
+				"\nDouble tap a direction to dash into enemies" +
+				"\nHide this accessory to disable its dash effect");
 		}
 
 		public override void SetDefaults()
@@ -19,14 +23,16 @@ namespace Thaumaturgy.Items
 			item.width = 24;
 			item.height = 28;
             item.value = Item.sellPrice(0, 5, 0, 0);
-            item.rare = 9;
+            item.rare = ItemRarityID.Expert;
 			item.accessory = true;
 			item.defense = 6;
+			item.expert = true;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-            player.dash = 2;
+			if (!hideVisual)
+				player.dash = 2;
             player.noKnockback = true;
             player.fireWalk = true;
             player.buffImmune[BuffID.Bleeding] = true;
@@ -44,8 +50,6 @@ namespace Thaumaturgy.Items
             player.buffImmune[BuffID.Blackout] = true;
             player.buffImmune[BuffID.Stoned] = true;
             player.buffImmune[BuffID.Frozen] = true;
-            player.buffImmune[BuffID.Electrified] = true;
-            player.buffImmune[BuffID.Gravitation] = true;
         }
 
 		public override void AddRecipes()
@@ -53,7 +57,9 @@ namespace Thaumaturgy.Items
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.EoCShield);
             recipe.AddIngredient(ItemID.AnkhShield);
-            recipe.AddIngredient(mod.ItemType("Starbrass"), 5);
+			recipe.AddIngredient(ItemID.SoulofMight, 15);
+			recipe.AddIngredient(mod.ItemType("AuricSteel"), 5);
+            recipe.AddIngredient(mod.ItemType("Starbrass"), 3);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

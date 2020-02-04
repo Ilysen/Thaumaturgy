@@ -6,7 +6,8 @@ namespace Thaumaturgy.Items
 {
 	public class StarbrassHamaxe : ModItem
 	{
-        public override void SetStaticDefaults()
+		public override string Texture => "Thaumaturgy/Textures/Items/StarbrassHamaxe";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Starbrass Hamaxe");
             Tooltip.SetDefault("Deals magic damage");

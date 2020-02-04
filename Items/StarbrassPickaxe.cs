@@ -6,7 +6,8 @@ namespace Thaumaturgy.Items
 {
 	public class StarbrassPickaxe : ModItem
 	{
-        public override void SetStaticDefaults()
+		public override string Texture => "Thaumaturgy/Textures/Items/StarbrassPickaxe";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Starbrass Pickaxe");
             Tooltip.SetDefault("Deals magic damage\nDispels creatures made of earth");

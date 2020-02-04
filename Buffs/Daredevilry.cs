@@ -9,7 +9,7 @@ namespace Thaumaturgy.Buffs
 		public override void SetDefaults()
         {
             DisplayName.SetDefault("Daredevilry");
-            Description.SetDefault("Grants all vanilla potion benefits");
+            Description.SetDefault("Grants most vanilla potion benefits");
             Main.buffNoSave[Type] = false;
             Main.debuff[Type] = false;
             canBeCleared = true;

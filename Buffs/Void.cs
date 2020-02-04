@@ -11,7 +11,7 @@ namespace Thaumaturgy.Buffs
         {
             DisplayName.SetDefault("Void");
             Description.SetDefault("Life will be drained to preserve mana");
-            Main.buffNoSave[Type] = true;
+            Main.buffNoSave[Type] = false;
             Main.debuff[Type] = false;
             canBeCleared = true;
         }

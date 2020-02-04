@@ -20,7 +20,25 @@ You are free to decompile, modify etc. this mod under the MIT License. The mod i
 
 # Changelog
 
+### Feb. 4, 2020
+
+#### 1.0.19.0
+
+* Heavy cleanup of internal code structure and file hierarchy.
+* The aural tether is no longer usable while your inventory window's open, to prevent accidental clearing of your mark.
+* Added a recipe to directly craft an auric core with 6 fallen stars, instead of having to craft 2 mana crystals first.
+* Added the rising star, a hardmode variant of the falling flame with infinite uses.
+* Prevented the falling flame from clipping you out of bounds and requiring a relog.
+* Removed the Falling Star cosmetic buff. This was a buff that got applied to you after using a falling flame, but because of how fast you were moving, none of its effects were visible.
+* Resprited the Champion's Crest and added Starbrass to its recipe.
+* Resprited the Aura Aegis.
+* Made the Aura Aegis a bit more expensive.
+* The Aura Aegis no longer protects from Electrified and Gravitation.
+* Changed the Aura Aegis' rarity to reflect its status as an Expert-mode item.
+
 ### Jan. 31, 2020
+
+#### 1.0.18.13
 
 Been a while!
 

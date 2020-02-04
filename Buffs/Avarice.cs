@@ -9,7 +9,7 @@ namespace Thaumaturgy.Buffs
         {
             DisplayName.SetDefault("Avarice");
             Description.SetDefault("Fortune and coin pickup range are increased");
-            Main.buffNoSave[Type] = true;
+            Main.buffNoSave[Type] = false;
             Main.debuff[Type] = false;
             canBeCleared = true;
         }

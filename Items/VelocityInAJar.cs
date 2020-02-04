@@ -5,6 +5,7 @@ namespace Thaumaturgy.Items
 {
 	public class VelocityInAJar : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/VelocityInAJar";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Velocity in a Jar");

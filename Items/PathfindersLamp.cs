@@ -5,8 +5,9 @@ using Terraria.ModLoader;
 namespace Thaumaturgy.Items
 {
     public class PathfindersLamp : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Items/PathfindersLamp";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Pathfinder's Lamp");
             Tooltip.SetDefault("Provides light while worn");

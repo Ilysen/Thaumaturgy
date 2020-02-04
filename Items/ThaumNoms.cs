@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class ThaumNoms : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/ThaumNoms";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Thaumic Pie");

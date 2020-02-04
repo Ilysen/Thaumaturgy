@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items.Weapons
 {
 	public class AuricGunshell : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/AuricGunshell";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Auric Gunshell");

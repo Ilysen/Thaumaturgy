@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class SpellboundWater : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Ingredients/SpellboundWater";
 		public override void SetStaticDefaults()
 		{
             DisplayName.SetDefault("Spellbound Water");

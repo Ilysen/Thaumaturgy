@@ -5,8 +5,9 @@ namespace Thaumaturgy.Items.Armor
 {
 	[AutoloadEquip(EquipType.Head)]
 	public class StarbrassMask : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/StarbrassMask";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Starbrass Mask");
             Tooltip.SetDefault("Mana usage reduced by 10%");
@@ -57,8 +58,9 @@ namespace Thaumaturgy.Items.Armor
 
     [AutoloadEquip(EquipType.Body)]
     public class StarbrassBreastplate : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/StarbrassBreastplate";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Starbrass Breatplate");
             Tooltip.SetDefault("Damage taken reduced by 10%");
@@ -93,8 +95,9 @@ namespace Thaumaturgy.Items.Armor
 
     [AutoloadEquip(EquipType.Legs)]
     public class StarbrassGreaves : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/StarbrassGreaves";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Starbrass Greaves");
             Tooltip.SetDefault("Maximum mana increased by 25\nMovement speed increased by 20%");

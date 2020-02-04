@@ -5,8 +5,9 @@ namespace Thaumaturgy.Items.Armor
 {
 	[AutoloadEquip(EquipType.Head)]
 	public class AuromechanicalHelmet : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/AuromechanicalHelmet";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Auromechanical Helmet");
             Tooltip.SetDefault("Grants true sight\nMana usage reduced by 20%");
@@ -69,8 +70,9 @@ namespace Thaumaturgy.Items.Armor
 
     [AutoloadEquip(EquipType.Body)]
     public class AuromechanicalPlate : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/AuromechanicalPlate";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Auromechanical Plate");
             Tooltip.SetDefault("Magic damage increased by 20%\nDamage taken reduced by 5%");
@@ -106,8 +108,9 @@ namespace Thaumaturgy.Items.Armor
 
     [AutoloadEquip(EquipType.Legs)]
     public class AuromechanicalGreaves : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/AuromechanicalGreaves";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Auromechanical Greaves");
             Tooltip.SetDefault("Maximum mana increased by 50\nProtects from fall damage");

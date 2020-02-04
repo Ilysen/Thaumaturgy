@@ -9,7 +9,7 @@ namespace Thaumaturgy.Buffs
         {
             DisplayName.SetDefault("Soothing Embers");
             Description.SetDefault("Enemy spawn rate tremendously reduced");
-            Main.buffNoSave[Type] = true;
+            Main.buffNoSave[Type] = false;
             Main.debuff[Type] = false;
             canBeCleared = true;
         }

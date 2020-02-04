@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class PhoenixDown : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/PhoenixDown";
 		public override void SetStaticDefaults()
 		{
             DisplayName.SetDefault("Phoenix Down");

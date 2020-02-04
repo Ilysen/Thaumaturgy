@@ -6,8 +6,9 @@ namespace Thaumaturgy.Items.Armor
 {
 	[AutoloadEquip(EquipType.Head)]
 	public class GogglesofRevealing : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/GogglesofRevealing";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Goggles of Revealing");
             Tooltip.SetDefault("Grants true sight");

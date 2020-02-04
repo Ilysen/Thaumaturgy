@@ -5,8 +5,9 @@ using Terraria.ModLoader;
 namespace Thaumaturgy.Items
 {
     public class BindShackle : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Items/BindShackle";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Bind-Shackle");
             Tooltip.SetDefault("Increases mining speed by 40%\n'We're all adrift together, together'");

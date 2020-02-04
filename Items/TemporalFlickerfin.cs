@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class TemporalFlickerfin : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/TemporalFlickerfin";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Temporal Flickerfin");

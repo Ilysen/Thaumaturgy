@@ -6,8 +6,9 @@ namespace Thaumaturgy.Items
 {
     [AutoloadEquip(EquipType.Shoes)]
     public class TerraTreads : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Wearable/TerraTreads";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Terra Treads");
             Tooltip.SetDefault("Allows flight, super fast running, and extra mobility on ice and liquids\n" +
@@ -42,7 +43,7 @@ namespace Thaumaturgy.Items
             recipe.AddIngredient(ItemID.FrostsparkBoots, 1);
             recipe.AddIngredient(ItemID.LavaWaders, 1);
             recipe.AddIngredient(ItemID.ChlorophyteBar, 5);
-            recipe.AddIngredient(mod.ItemType("AuricCore"), 2);
+			recipe.AddIngredient(mod.ItemType("AuricCore"), 2);
             recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));

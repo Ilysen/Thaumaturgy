@@ -11,7 +11,7 @@ namespace Thaumaturgy.Buffs
         {
             DisplayName.SetDefault("Evasion");
             Description.SetDefault("Dash by double-tapping left or right");
-            Main.buffNoSave[Type] = true;
+            Main.buffNoSave[Type] = false;
             Main.debuff[Type] = false;
             canBeCleared = true;
         }

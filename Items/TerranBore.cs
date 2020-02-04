@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class TerranBore : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/TerranBore";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Terran Bore");

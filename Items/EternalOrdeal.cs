@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class EternalOrdeal : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/EternalOrdeal";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Eternal Ordeal");

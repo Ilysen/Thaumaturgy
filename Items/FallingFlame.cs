@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class FallingFlame : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/FallingFlame";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Falling Flame");
@@ -31,9 +32,9 @@ namespace Thaumaturgy.Items
 
         public override bool UseItem(Player player)
         {
-            player.AddBuff(mod.BuffType("FallingFlame"), 3000);
             player.velocity.X += player.direction <= 0 ? -100 : 100;
-            player.velocity.Y -= 25;
+			player.velocity.X.Clamp(-200, 200); // For safety. Going too fast can clip you out of bounds!
+			player.velocity.Y -= 25;
             return true;
         }
 

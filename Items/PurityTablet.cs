@@ -6,6 +6,7 @@ namespace Thaumaturgy.Items
 {
 	public class PurityTablet : ModItem
 	{
+		public override string Texture => "Thaumaturgy/Textures/Items/PurityTablet";
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Purity Tablet");

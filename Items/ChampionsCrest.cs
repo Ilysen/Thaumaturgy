@@ -5,8 +5,9 @@ using Terraria.ModLoader;
 namespace Thaumaturgy.Items
 {
     public class ChampionsCrest : ModItem
-    {
-        public override void SetStaticDefaults()
+	{
+		public override string Texture => "Thaumaturgy/Textures/Items/ChampionsCrest";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Champion's Crest");
             Tooltip.SetDefault("Most slimes become friendly\n" +
@@ -73,7 +74,8 @@ namespace Thaumaturgy.Items
 			recipe.AddIngredient(ItemID.SporeSac);
             recipe.AddIngredient(ItemID.ShinyStone);
             recipe.AddIngredient(mod.ItemType("AuricCore"));
-            recipe.SetResult(this);
+			recipe.AddIngredient(mod.ItemType("Starbrass"));
+			recipe.SetResult(this);
             recipe.AddTile(mod.TileType("Thaumatrestle"));
             recipe.AddTile(mod.TileType("SynthesisFocus"));
             recipe.AddRecipe();

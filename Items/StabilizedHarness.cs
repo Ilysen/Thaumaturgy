@@ -10,10 +10,11 @@ namespace Thaumaturgy.Items
     {
         int soundtimer = 0;
 
-        public override void SetStaticDefaults()
+		public override string Texture => "Thaumaturgy/Textures/Wearable/StabilizedHarness";
+		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Stabilized Harness");
-            Tooltip.SetDefault("Allows flight and slow fall\nStabilised using souls of flight - won't malfunction");
+            Tooltip.SetDefault("Allows flight and slow fall\nStable - won't malfunction");
         }
 
         public override void SetDefaults()
